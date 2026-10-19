@@ -5,6 +5,16 @@ Format: date · decision · why · status
 
 ---
 
+### 2026-10-18 · Visual direction for v1
+**Decision:** Dark background (#131210) with one loud accent (electric lime #C8F03C). Unbounded for titles, Figtree for body text. The reveal is a tilted card; the timeline is a polaroid scrapbook. Bottom nav: Spin / Scrapbook / Leaderboard.
+**Why:** Feels like game night, not a productivity app. One accent keeps "Spin" and points the loudest things on screen.
+**Status:** ✅ Decided 2026-10-18. Yuri reviewed and approved the mockups (https://claude.ai/artifact/VNJdYw2hQALm1exTgk5bLY).
+
+### 2026-10-18 · Points go to whoever showed up
+**Decision:** When logging a challenge, the person logging it ticks who actually took part. Only those people get the challenge's points, plus the +5 photo bonus each if a photo is added.
+**Why:** The leaderboard counts points per person, so the app has to know who was there. Skipping the night shouldn't earn you points.
+**Status:** ✅ Decided
+
 ### 2026-10-19 · Plan before building
 **Decision:** Set up the Project, brief, and stack before writing any code.
 **Why:** Claude works best when it has stable context to refer back to.
@@ -50,3 +60,24 @@ Format: date · decision · why · status
 **Decision:** The person who spins accepts the challenge (or uses the one re-roll) for the group. No voting in v1.
 **Why:** Fast, keeps the game feel. Voting goes on the "Later" list.
 **Status:** ✅ Decided
+
+### 2026-10-19 · Supabase project lives in Frankfurt (free tier)
+**Decision:** One Supabase project, "unloop", in the EU Central (Frankfurt) region on the free plan. Database changes only through `supabase/migrations/`.
+**Why:** Closest region to our first users; the free tier covers v1 easily.
+**Status:** ✅ Done
+
+### 2026-10-19 · How the spin picks a challenge
+**Decision:** Filters are "up to": picking 2–3h also allows shorter challenges; "Either" challenges match both inside and outside; no budget or level picked means any. Challenges the group already finished are skipped until nothing else fits. Each group has one open challenge at a time; someone else can take over a reveal that was left hanging, but your own reveal stays put, so backing out isn't a free re-roll.
+**Why:** Keeps 60 challenges from running dry too fast, and keeps the one re-roll rule honest.
+**Status:** ✅ Decided
+
+### 2026-10-19 · Language is picked per phone, not in the link
+**Decision:** The EN / HY / RU switch is on the welcome screen (and at the bottom of the leaderboard) and is remembered on that phone. Links don't change with language, so one invite link works for everyone.
+**Why:** Friends in one group may read different languages; the invite link should be the same for all.
+**Status:** ✅ Decided
+
+### 2026-10-19 · Small screen additions beyond the mockups
+**Decision:** The group screen asks "What do your friends call you?" (names show on the crew, proof and leaderboard screens). The bottom of the leaderboard holds the invite link, language switch and sign out, since the mockups had no settings screen.
+**Why:** Without them, names would come from email addresses and there'd be no way to invite a late friend or sign out.
+**Status:** ✅ Decided
+

@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #131210;
+  --color-card: #1e1c19;
+  --color-raised: #2a2723;
+  --color-line: #3a3631;
+  --color-paper: #f4f1ea;
+  --color-soft: #d9d3c7;
+  --color-muted: #a8a296;
+  --color-dim: #5c554b;
+  --color-lime: #c8f03c;
+  --color-lime-hover: #e2ff7a;
+  --color-cream: #fff8ee;
+  --color-sand: #f4ebdd;
+  --color-sand-line: #e3d7c4;
+  --color-easy: #6fd3a0;
+  --color-spicy: #ff9a4d;
+  --color-extreme: #ff8a8a;
+}
+
+/* Inline so the next/font variables (set on <body>) resolve where they're used. */
+@theme inline {
+  --font-sans: var(--font-figtree), var(--font-manrope), var(--font-armenian), system-ui, sans-serif;
+  --font-display: var(--font-unbounded), var(--font-armenian), system-ui, sans-serif;
+  --font-hand: var(--font-caveat), var(--font-armenian), cursive;
+}
+
+html,
+body {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-tap-highlight-color: transparent;
+  min-height: 100dvh;
+}
+
+/* The reveal: the card drops in, tilts, and settles. */
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) rotate(8deg) scale(0.85);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-6px) rotate(-4deg) scale(1.03);
+  }
+  100% {
+    transform: rotate(-1.5deg);
+  }
+}
+.animate-reveal {
+  animation: reveal 0.7s cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
+}
+
+@keyframes spin-wheel {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin-wheel {
+  animation: spin-wheel 0.6s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-reveal,
+  .animate-spin-wheel {
+    animation: none;
+  }
+}

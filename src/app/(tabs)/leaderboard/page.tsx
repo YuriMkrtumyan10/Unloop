@@ -1,0 +1,59 @@
+import { getTranslations } from "next-intl/server";
+import { requireGroup } from "@/lib/group";
+import { Avatar } from "@/components/Avatar";
+import { CrewSettings } from "@/components/CrewSettings";
+import { Icon } from "@/components/Icon";
+import { Podium, type Standing } from "@/components/Podium";
+
+export default async function LeaderboardPage() {
+  const { supabase, group, crew } = await requireGroup();
+  const t = await getTranslations("leaderboard");
+
+  const { data } = await supabase.from("leaderboard").select("user_id, points, challenges").eq("group_id", group.id);
+  const standings: Standing[] = crew
+    .map((profile) => {
+      const row = data?.find((r) => r.user_id === profile.id);
+      return { profile, points: row?.points ?? 0, challenges: row?.challenges ?? 0 };
+    })
+    .sort((a, b) => b.points - a.points || b.challenges - a.challenges);
+
+  const rest = standings.slice(3);
+  const last = standings.at(-1);
+  const showNudge = standings.length >= 3 && last && last.points < standings[standings.length - 2].points;
+
+  return (
+    <div className="flex grow flex-col pb-8">
+      <header className="flex flex-col gap-1 px-6 pt-[52px] pb-2">
+        <span className="text-[13px] font-medium text-muted">
+          {group.name} · {t("allTime")}
+        </span>
+        <h1 className="font-display text-[26px] font-bold">{t("title")}</h1>
+      </header>
+
+      <Podium top={standings.slice(0, 3)} />
+
+      <div className="flex flex-col gap-2.5 px-6 pt-5">
+        {rest.map((s, i) => (
+          <div key={s.profile.id} className="flex min-h-16 items-center gap-3.5 rounded-[18px] bg-card px-4">
+            <span className="w-5 font-display text-[15px] font-bold text-muted">{i + 4}</span>
+            <Avatar profile={s.profile} size={40} />
+            <div className="flex min-w-0 grow flex-col">
+              <b className="truncate font-bold">{s.profile.display_name}</b>
+              <em className="text-[13px] font-medium text-muted not-italic">{t("challenges", { n: s.challenges })}</em>
+            </div>
+            <span className="font-display text-lg font-bold">{s.points}</span>
+          </div>
+        ))}
+
+        {showNudge && (
+          <div className="mt-1.5 flex items-center gap-3 rounded-[18px] border-[1.5px] border-dashed border-line p-4">
+            <Icon name="spin" size={22} className="shrink-0 text-lime" />
+            <p className="text-sm leading-[1.4] font-medium text-soft">{t("nudge", { name: last.profile.display_name })}</p>
+          </div>
+        )}
+
+        <CrewSettings code={group.invite_code} groupName={group.name} />
+      </div>
+    </div>
+  );
+}

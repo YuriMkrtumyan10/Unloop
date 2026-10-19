@@ -21,5 +21,5 @@ If v1 works, we can wrap the same app for the App Store / Google Play, or rebuil
 
 ## Accounts
 - [x] GitHub: repo `Unloop`
-- [x] Supabase: org "Unloop Org"
+- [x] Supabase: org "Unloop Org", project "unloop" (Frankfurt, free tier)
 - [x] Vercel: project `unloop`
