@@ -15,7 +15,7 @@ npm run dev                  # http://localhost:3000
 
 ## Where things live
 
-- `src/app/`: screens (welcome, group, spin, run = reveal/active, run/proof, scrapbook, leaderboard)
+- `src/app/`: screens (welcome, group, spin, run = reveal/active, run/proof, scrapbook, leaderboard, account, new-password)
 - `src/components/`: one component per file
 - `messages/{en,hy,ru}.json`: every piece of UI text
 - `supabase/migrations/`: database schema, rules and the challenge seed

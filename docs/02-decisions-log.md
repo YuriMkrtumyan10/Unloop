@@ -81,3 +81,9 @@ Format: date · decision · why · status
 **Why:** Without them, names would come from email addresses and there'd be no way to invite a late friend or sign out.
 **Status:** ✅ Decided
 
+### 2026-10-19 · Log in with a password, and an Account tab
+**Decision:** The welcome screen has separate Log in and Sign up buttons, both with email and password (Google still works). "Forgot password?" emails a link to set a new one. The email-link-only sign-in is gone. A fourth bottom tab, Account, holds your name, avatar color, password change, language and sign out (moved from the bottom of the leaderboard; the invite link stays there). Change email, notifications, leave crew and delete account are shown as "Soon" until they're built.
+**Why:** On a second phone the old screen only offered what looked like signing up again. Yuri asked for a proper log in, password reset and an account page.
+**Needs:** Supabase's built-in email only reaches members of the Supabase team, so friends get sign-up and reset emails only once a custom email sender (SMTP) is set up in Supabase.
+**Status:** ✅ Decided (Yuri, 2026-10-19)
+

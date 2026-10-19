@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { requireGroup } from "@/lib/group";
 import { Avatar } from "@/components/Avatar";
-import { CrewSettings } from "@/components/CrewSettings";
+import { InviteSection } from "@/components/InviteSection";
 import { Icon } from "@/components/Icon";
 import { Podium, type Standing } from "@/components/Podium";
 
@@ -52,7 +52,7 @@ export default async function LeaderboardPage() {
           </div>
         )}
 
-        <CrewSettings code={group.invite_code} groupName={group.name} />
+        <InviteSection code={group.invite_code} groupName={group.name} />
       </div>
     </div>
   );

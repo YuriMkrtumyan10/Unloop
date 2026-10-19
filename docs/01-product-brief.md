@@ -22,7 +22,8 @@ An app that removes the "someone has to come up with an idea" step. Open it, tel
 
 ## 5. MVP scope (version 1)
 **In:**
-- Sign up or log in (email or Google)
+- Sign up or log in (email and password, or Google), with password reset
+- Account page: name, avatar color, password, language, sign out
 - Create a group and invite friends by link
 - Challenge library (starting with ~60 hand-written challenges, see `03-challenges.md`)
 - Filters: group size, time, budget, indoor/outdoor, difficulty (easy / spicy / extreme)
