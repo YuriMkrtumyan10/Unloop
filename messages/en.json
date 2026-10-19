@@ -1,0 +1,169 @@
+{
+  "common": {
+    "back": "Back"
+  },
+  "nav": {
+    "spin": "Spin",
+    "scrapbook": "Scrapbook",
+    "leaderboard": "Leaderboard"
+  },
+  "welcome": {
+    "taglineSame": "Same place. Same game. Same night.",
+    "taglineNot": "Not tonight.",
+    "pitch": "Spin a challenge, go do it with your crew, keep the proof.",
+    "google": "Continue with Google",
+    "email": "Continue with email",
+    "emailLabel": "Your email",
+    "emailPlaceholder": "you@example.com",
+    "sendLink": "Send me a magic link",
+    "back": "Never mind",
+    "checkInbox": "Check your inbox",
+    "linkSent": "We sent a sign-in link to {email}. Open it on this phone.",
+    "tryAgain": "Wrong email? Try again",
+    "error": "That didn't work. Give it another go.",
+    "inviteHint": "Got an invite link? Open it after you sign in and you'll land in the group."
+  },
+  "group": {
+    "title": "Who's breaking the loop with you?",
+    "yourName": "What do your friends call you?",
+    "nameCrew": "Name your crew",
+    "crewPlaceholder": "The Usual Suspects",
+    "create": "Create group",
+    "created": "Crew created. Now drag your friends in.",
+    "letsGo": "Let's spin",
+    "haveLink": "already got a link?",
+    "pasteLink": "Paste invite link",
+    "join": "Join"
+  },
+  "join": {
+    "title": "You've been invited. Resistance is futile.",
+    "cta": "Join the crew"
+  },
+  "invite": {
+    "copy": "Copy",
+    "copied": "Copied!",
+    "share": "Share to the group chat",
+    "shareText": "Join {group} on Unloop. We're breaking the loop."
+  },
+  "home": {
+    "greeting": "Friday again?",
+    "pts": "{n} pts",
+    "happeningNow": "Happening now",
+    "howMany": "How many of you?",
+    "fewer": "Fewer people",
+    "more": "More people",
+    "time": "Time",
+    "times": {
+      "quick": "Under 1h",
+      "short": "2–3h",
+      "half": "Half day",
+      "full": "All day+"
+    },
+    "budget": "Budget",
+    "free": "$ free-ish",
+    "where": "Where",
+    "inside": "Inside",
+    "outside": "Outside",
+    "dontCare": "Don't care",
+    "brave": "How brave?",
+    "levels": {
+      "easy": "Easy",
+      "spicy": "Spicy",
+      "extreme": "Extreme"
+    },
+    "spin": "SPIN"
+  },
+  "reveal": {
+    "whoDecides": "{name} spun. {name} decides.",
+    "waiting": "{name} is deciding. Stand by.",
+    "people": "{n}+ people",
+    "youAre": "you're {n}",
+    "time": "time",
+    "budget": "budget",
+    "where": "where",
+    "place": {
+      "in": "Inside",
+      "out": "Outside",
+      "either": "Anywhere"
+    },
+    "pts": "pts",
+    "photoBonus": "+5 with a photo",
+    "accept": "Let's do it",
+    "reroll": "Re-roll",
+    "rerollLeft": "(1 left, then no escape)",
+    "noRerolls": "No re-rolls left. Destiny."
+  },
+  "time": {
+    "minutes": "~{n} min",
+    "hours": "~{n, plural, one {# hour} other {# hours}}",
+    "hoursRange": "{min}–{max} hours",
+    "fullDay": "Full day",
+    "overnight": "Overnight"
+  },
+  "categories": {
+    "outdoors": "Outdoors",
+    "food": "Food & drink",
+    "creative": "Creative",
+    "learn": "Learn",
+    "games": "Games",
+    "social": "Social",
+    "spicy": "Spicy",
+    "quick": "Quick win"
+  },
+  "levels": {
+    "easy": "Easy",
+    "spicy": "Spicy",
+    "extreme": "Extreme"
+  },
+  "active": {
+    "now": "Happening now",
+    "crew": "The crew",
+    "acceptedBy": "accepted by {name}, {time}",
+    "photoHint": "Snap a photo while it's happening. It's worth <b>+5 bonus points</b> and it goes in the scrapbook.",
+    "done": "Done! Add proof",
+    "later": "Back to home (it'll wait for you)"
+  },
+  "proof": {
+    "title": "Pics or it didn't happen",
+    "addPhoto": "Add a photo",
+    "photoAlt": "Your proof photo",
+    "change": "Change",
+    "bonus": "+5 bonus pts",
+    "noteLabel": "One line for the scrapbook",
+    "optional": "(optional)",
+    "notePlaceholder": "How did it go?",
+    "whoShowedUp": "Who actually showed up?",
+    "logIt": "Log it · {n} pts each",
+    "withPhoto": "Add the photo and it's {n} each.",
+    "saving": "Saving…"
+  },
+  "scrapbook": {
+    "title": "Scrapbook",
+    "count": "{n, plural, =0 {no loops broken yet} one {# loop broken} other {# loops broken}}",
+    "noPhoto": "no photo,\njust vibes",
+    "empty": "Empty pages. Go make some memories.",
+    "emptyCta": "Spin something"
+  },
+  "leaderboard": {
+    "title": "Leaderboard",
+    "allTime": "all time",
+    "place1": "1st",
+    "place2": "2nd",
+    "place3": "3rd",
+    "challenges": "{n, plural, one {# challenge} other {# challenges}}",
+    "nudge": "{name}, one Extreme challenge and you're out of last place."
+  },
+  "settings": {
+    "inviteMore": "Invite more friends",
+    "signOut": "Sign out"
+  },
+  "errors": {
+    "generic": "Something went sideways. Try again.",
+    "needName": "Give your crew a name first.",
+    "badInvite": "That invite link doesn't work. Ask for a fresh one.",
+    "nothingFits": "Nothing fits those filters. Loosen one up and spin again.",
+    "nothingElse": "That was the only one that fits. Looks like fate.",
+    "nobody": "Tick at least one person who showed up.",
+    "upload": "The photo didn't upload. Try again, or log it without one."
+  }
+}

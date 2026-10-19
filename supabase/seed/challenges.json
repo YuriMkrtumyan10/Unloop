@@ -1,0 +1,1022 @@
+[
+  {
+    "id": 1,
+    "category": "outdoors",
+    "min_people": 2,
+    "hours_min": 4,
+    "hours_max": 6,
+    "time_bucket": "half",
+    "cost": 1,
+    "place": "out",
+    "points": 30,
+    "level": "spicy",
+    "title": {
+      "en": "Hike a trail none of you have ever done",
+      "hy": "Քայլեք մի արահետով, որով ձեզնից ոչ ոք երբեք չի անցել",
+      "ru": "Пройдите тропу, по которой никто из вас ещё не ходил"
+    }
+  },
+  {
+    "id": 2,
+    "category": "outdoors",
+    "min_people": 2,
+    "hours_min": 3,
+    "hours_max": 3,
+    "time_bucket": "short",
+    "cost": 1,
+    "place": "out",
+    "points": 30,
+    "level": "spicy",
+    "title": {
+      "en": "Watch the sunrise from a high point, with breakfast you packed",
+      "hy": "Դիմավորեք արևածագը բարձր կետից՝ ձեր հետ բերած նախաճաշով",
+      "ru": "Встретьте рассвет на высокой точке с завтраком, который взяли с собой"
+    }
+  },
+  {
+    "id": 3,
+    "category": "outdoors",
+    "min_people": 2,
+    "hours_min": 2,
+    "hours_max": 2,
+    "time_bucket": "short",
+    "cost": 2,
+    "place": "out",
+    "points": 15,
+    "level": "easy",
+    "title": {
+      "en": "Picnic somewhere you've never sat down before",
+      "hy": "Պիկնիկ արեք մի տեղ, որտեղ երբեք չեք նստել",
+      "ru": "Устройте пикник там, где вы ещё никогда не сидели"
+    }
+  },
+  {
+    "id": 4,
+    "category": "outdoors",
+    "min_people": 2,
+    "hours_min": 8,
+    "hours_max": 12,
+    "time_bucket": "full",
+    "cost": 2,
+    "place": "out",
+    "points": 40,
+    "level": "extreme",
+    "title": {
+      "en": "Take a day trip to a town you've never visited",
+      "hy": "Մեկօրյա ուղևորություն արեք մի քաղաք, որտեղ երբեք չեք եղել",
+      "ru": "Съездите на день в город, где вы ещё не были"
+    }
+  },
+  {
+    "id": 5,
+    "category": "outdoors",
+    "min_people": 2,
+    "hours_min": 3,
+    "hours_max": 3,
+    "time_bucket": "short",
+    "cost": 1,
+    "place": "out",
+    "points": 25,
+    "level": "spicy",
+    "title": {
+      "en": "Stargazing night: get out of the city lights, bring blankets",
+      "hy": "Աստղերի գիշեր․ դուրս եկեք քաղաքի լույսերից, վերցրեք ծածկոցներ",
+      "ru": "Ночь звёзд: уезжайте от городских огней, возьмите пледы"
+    }
+  },
+  {
+    "id": 6,
+    "category": "outdoors",
+    "min_people": 2,
+    "hours_min": 3,
+    "hours_max": 3,
+    "time_bucket": "short",
+    "cost": 1,
+    "place": "out",
+    "points": 25,
+    "level": "spicy",
+    "title": {
+      "en": "Go swimming in a lake, river, or sea (safely)",
+      "hy": "Լողացեք լճում, գետում կամ ծովում (անվտանգ)",
+      "ru": "Искупайтесь в озере, реке или море (безопасно)"
+    }
+  },
+  {
+    "id": 7,
+    "category": "outdoors",
+    "min_people": 2,
+    "hours_min": 3,
+    "hours_max": 3,
+    "time_bucket": "short",
+    "cost": 2,
+    "place": "out",
+    "points": 20,
+    "level": "spicy",
+    "title": {
+      "en": "Rent bikes and ride somewhere new",
+      "hy": "Վարձեք հեծանիվներ և գնացեք մի նոր տեղ",
+      "ru": "Возьмите велосипеды напрокат и доедьте до нового места"
+    }
+  },
+  {
+    "id": 8,
+    "category": "outdoors",
+    "min_people": 3,
+    "hours_min": 12,
+    "hours_max": 24,
+    "time_bucket": "full",
+    "cost": 2,
+    "place": "out",
+    "points": 50,
+    "level": "extreme",
+    "title": {
+      "en": "Camp overnight",
+      "hy": "Գիշերեք վրանով",
+      "ru": "Заночуйте в палатке"
+    }
+  },
+  {
+    "id": 9,
+    "category": "outdoors",
+    "min_people": 2,
+    "hours_min": 4,
+    "hours_max": 4,
+    "time_bucket": "half",
+    "cost": 1,
+    "place": "out",
+    "points": 25,
+    "level": "spicy",
+    "title": {
+      "en": "Walk across the city from one edge to the other",
+      "hy": "Քայլեք քաղաքով մի ծայրից մյուսը",
+      "ru": "Пройдите город пешком от одного края до другого"
+    }
+  },
+  {
+    "id": 10,
+    "category": "outdoors",
+    "min_people": 2,
+    "hours_min": 3,
+    "hours_max": 3,
+    "time_bucket": "short",
+    "cost": 1,
+    "place": "out",
+    "points": 25,
+    "level": "spicy",
+    "title": {
+      "en": "Find and visit an abandoned or forgotten place (legally)",
+      "hy": "Գտեք և այցելեք լքված կամ մոռացված մի վայր (օրինական)",
+      "ru": "Найдите и посетите заброшенное или забытое место (законно)"
+    }
+  },
+  {
+    "id": 11,
+    "category": "food",
+    "min_people": 2,
+    "hours_min": 3,
+    "hours_max": 3,
+    "time_bucket": "short",
+    "cost": 2,
+    "place": "in",
+    "points": 20,
+    "level": "spicy",
+    "title": {
+      "en": "Cook a dish from a country none of you has visited",
+      "hy": "Պատրաստեք ուտեստ մի երկրից, որտեղ ձեզնից ոչ ոք չի եղել",
+      "ru": "Приготовьте блюдо из страны, где никто из вас не был"
+    }
+  },
+  {
+    "id": 12,
+    "category": "food",
+    "min_people": 2,
+    "hours_min": 2,
+    "hours_max": 2,
+    "time_bucket": "short",
+    "cost": 2,
+    "place": "either",
+    "points": 15,
+    "level": "easy",
+    "title": {
+      "en": "Eat at a restaurant serving a cuisine you've never tried",
+      "hy": "Ճաշեք մի ռեստորանում, որի խոհանոցը երբեք չեք փորձել",
+      "ru": "Поужинайте в ресторане с кухней, которую вы ещё не пробовали"
+    }
+  },
+  {
+    "id": 13,
+    "category": "food",
+    "min_people": 4,
+    "hours_min": 3,
+    "hours_max": 3,
+    "time_bucket": "short",
+    "cost": 2,
+    "place": "in",
+    "points": 25,
+    "level": "spicy",
+    "title": {
+      "en": "Cook-off: two teams, same ingredients, one judge",
+      "hy": "Խոհարարական մրցույթ․ երկու թիմ, նույն մթերքներ, մեկ դատավոր",
+      "ru": "Кулинарная битва: две команды, одни продукты, один судья"
+    }
+  },
+  {
+    "id": 14,
+    "category": "food",
+    "min_people": 1,
+    "hours_min": 3,
+    "hours_max": 3,
+    "time_bucket": "short",
+    "cost": 1,
+    "place": "in",
+    "points": 20,
+    "level": "spicy",
+    "title": {
+      "en": "Make something from scratch you usually buy (bread, pasta, ice cream)",
+      "hy": "Զրոյից պատրաստեք մի բան, որը սովորաբար գնում եք (հաց, մակարոն, պաղպաղակ)",
+      "ru": "Сделайте с нуля то, что обычно покупаете (хлеб, пасту, мороженое)"
+    }
+  },
+  {
+    "id": 15,
+    "category": "food",
+    "min_people": 2,
+    "hours_min": 1,
+    "hours_max": 1,
+    "time_bucket": "quick",
+    "cost": 2,
+    "place": "either",
+    "points": 10,
+    "level": "easy",
+    "title": {
+      "en": "Order the one item on the menu nobody would ever pick",
+      "hy": "Պատվիրեք մենյուի այն ուտեստը, որը ոչ ոք երբեք չէր ընտրի",
+      "ru": "Закажите то блюдо из меню, которое никто бы никогда не выбрал"
+    }
+  },
+  {
+    "id": 16,
+    "category": "food",
+    "min_people": 3,
+    "hours_min": 3,
+    "hours_max": 3,
+    "time_bucket": "short",
+    "cost": 2,
+    "place": "either",
+    "points": 25,
+    "level": "spicy",
+    "title": {
+      "en": "Market run: each person buys an ingredient they've never used, then cook together",
+      "hy": "Շուկա․ ամեն մեկը գնում է մի մթերք, որը երբեք չի օգտագործել, հետո միասին եփում եք",
+      "ru": "Поход на рынок: каждый покупает продукт, который никогда не использовал, потом готовите вместе"
+    }
+  },
+  {
+    "id": 17,
+    "category": "food",
+    "min_people": 3,
+    "hours_min": 1,
+    "hours_max": 1,
+    "time_bucket": "quick",
+    "cost": 1,
+    "place": "in",
+    "points": 10,
+    "level": "easy",
+    "title": {
+      "en": "Blind taste test: 5 versions of the same thing (chocolate, juice, chips)",
+      "hy": "Կույր համտես․ նույն բանի 5 տարբերակ (շոկոլադ, հյութ, չիպս)",
+      "ru": "Слепая дегустация: 5 версий одного и того же (шоколад, сок, чипсы)"
+    }
+  },
+  {
+    "id": 18,
+    "category": "food",
+    "min_people": 3,
+    "hours_min": 4,
+    "hours_max": 4,
+    "time_bucket": "half",
+    "cost": 3,
+    "place": "in",
+    "points": 35,
+    "level": "extreme",
+    "title": {
+      "en": "Host a full dinner where every course is a different country",
+      "hy": "Կազմակերպեք ընթրիք, որտեղ ամեն ուտեստ տարբեր երկրից է",
+      "ru": "Устройте ужин, где каждое блюдо из другой страны"
+    }
+  },
+  {
+    "id": 19,
+    "category": "creative",
+    "min_people": 3,
+    "hours_min": 3,
+    "hours_max": 3,
+    "time_bucket": "short",
+    "cost": 1,
+    "place": "either",
+    "points": 30,
+    "level": "spicy",
+    "title": {
+      "en": "Make a 2-minute short film together, start to finish, tonight",
+      "hy": "Միասին նկարահանեք 2 րոպեանոց կարճամետրաժ ֆիլմ՝ սկզբից մինչև վերջ, այսօր",
+      "ru": "Снимите вместе 2-минутный короткий фильм от начала до конца, сегодня"
+    }
+  },
+  {
+    "id": 20,
+    "category": "creative",
+    "min_people": 2,
+    "hours_min": 2,
+    "hours_max": 2,
+    "time_bucket": "short",
+    "cost": 1,
+    "place": "in",
+    "points": 15,
+    "level": "easy",
+    "title": {
+      "en": "Paint each other's portraits (talent not required)",
+      "hy": "Նկարեք միմյանց դիմանկարները (տաղանդ պետք չէ)",
+      "ru": "Нарисуйте портреты друг друга (талант не нужен)"
+    }
+  },
+  {
+    "id": 21,
+    "category": "creative",
+    "min_people": 3,
+    "hours_min": 2,
+    "hours_max": 2,
+    "time_bucket": "short",
+    "cost": 1,
+    "place": "in",
+    "points": 25,
+    "level": "spicy",
+    "title": {
+      "en": "Write a song together and record it on a phone",
+      "hy": "Միասին գրեք երգ և ձայնագրեք այն հեռախոսով",
+      "ru": "Напишите вместе песню и запишите её на телефон"
+    }
+  },
+  {
+    "id": 22,
+    "category": "creative",
+    "min_people": 2,
+    "hours_min": 2,
+    "hours_max": 2,
+    "time_bucket": "short",
+    "cost": 1,
+    "place": "out",
+    "points": 15,
+    "level": "easy",
+    "title": {
+      "en": "Photo walk: everyone shoots the same theme, then vote on the best",
+      "hy": "Ֆոտոզբոսանք․ բոլորը նկարում են նույն թեման, հետո ընտրում եք լավագույնը",
+      "ru": "Фотопрогулка: все снимают одну тему, потом голосуете за лучший кадр"
+    }
+  },
+  {
+    "id": 23,
+    "category": "creative",
+    "min_people": 3,
+    "hours_min": 1,
+    "hours_max": 1,
+    "time_bucket": "quick",
+    "cost": 1,
+    "place": "in",
+    "points": 10,
+    "level": "easy",
+    "title": {
+      "en": "Build the tallest tower you can from one material",
+      "hy": "Կառուցեք ամենաբարձր աշտարակը մեկ նյութից",
+      "ru": "Постройте самую высокую башню из одного материала"
+    }
+  },
+  {
+    "id": 24,
+    "category": "creative",
+    "min_people": 2,
+    "hours_min": 2,
+    "hours_max": 2,
+    "time_bucket": "short",
+    "cost": 2,
+    "place": "in",
+    "points": 25,
+    "level": "spicy",
+    "title": {
+      "en": "Take a pottery, dance, or art class none of you has tried",
+      "hy": "Գնացեք խեցեգործության, պարի կամ նկարչության դաս, որը ձեզնից ոչ ոք չի փորձել",
+      "ru": "Сходите на гончарный, танцевальный или художественный урок, который никто из вас не пробовал"
+    }
+  },
+  {
+    "id": 25,
+    "category": "creative",
+    "min_people": 3,
+    "hours_min": 2,
+    "hours_max": 2,
+    "time_bucket": "short",
+    "cost": 1,
+    "place": "in",
+    "points": 15,
+    "level": "easy",
+    "title": {
+      "en": "Make a group comic strip about your usual Friday night",
+      "hy": "Միասին նկարեք կոմիքս ձեր սովորական ուրբաթ երեկոյի մասին",
+      "ru": "Нарисуйте общий комикс про ваш обычный вечер пятницы"
+    }
+  },
+  {
+    "id": 26,
+    "category": "learn",
+    "min_people": 3,
+    "hours_min": 2,
+    "hours_max": 2,
+    "time_bucket": "short",
+    "cost": 1,
+    "place": "in",
+    "points": 15,
+    "level": "easy",
+    "title": {
+      "en": "Everyone learns one magic trick, then performs it",
+      "hy": "Ամեն մեկը սովորում է մեկ աճպարարություն, հետո ցույց տալիս",
+      "ru": "Каждый учит один фокус, а потом показывает его"
+    }
+  },
+  {
+    "id": 27,
+    "category": "learn",
+    "min_people": 3,
+    "hours_min": 2,
+    "hours_max": 2,
+    "time_bucket": "short",
+    "cost": 1,
+    "place": "in",
+    "points": 20,
+    "level": "spicy",
+    "title": {
+      "en": "Each person teaches the group something in 10 minutes",
+      "hy": "Ամեն մեկը 10 րոպեում խմբին ինչ-որ բան է սովորեցնում",
+      "ru": "Каждый за 10 минут учит группу чему-нибудь"
+    }
+  },
+  {
+    "id": 28,
+    "category": "learn",
+    "min_people": 2,
+    "hours_min": 1,
+    "hours_max": 1,
+    "time_bucket": "quick",
+    "cost": 1,
+    "place": "in",
+    "points": 15,
+    "level": "easy",
+    "title": {
+      "en": "Learn 20 words in a language none of you speaks, then quiz each other",
+      "hy": "Սովորեք 20 բառ մի լեզվով, որը ձեզնից ոչ ոք չգիտի, հետո ստուգեք միմյանց",
+      "ru": "Выучите 20 слов на языке, которого никто из вас не знает, и проверьте друг друга"
+    }
+  },
+  {
+    "id": 29,
+    "category": "learn",
+    "min_people": 2,
+    "hours_min": 2,
+    "hours_max": 2,
+    "time_bucket": "short",
+    "cost": 2,
+    "place": "in",
+    "points": 15,
+    "level": "easy",
+    "title": {
+      "en": "Visit a museum you've never been to",
+      "hy": "Այցելեք մի թանգարան, որտեղ երբեք չեք եղել",
+      "ru": "Сходите в музей, где вы ещё не были"
+    }
+  },
+  {
+    "id": 30,
+    "category": "learn",
+    "min_people": 2,
+    "hours_min": 2,
+    "hours_max": 2,
+    "time_bucket": "short",
+    "cost": 1,
+    "place": "in",
+    "points": 20,
+    "level": "spicy",
+    "title": {
+      "en": "Go to a public lecture, talk, or open-mic",
+      "hy": "Գնացեք հանրային դասախոսության, զրույցի կամ open-mic-ի",
+      "ru": "Сходите на открытую лекцию, встречу или открытый микрофон"
+    }
+  },
+  {
+    "id": 31,
+    "category": "learn",
+    "min_people": 1,
+    "hours_min": 1,
+    "hours_max": 1,
+    "time_bucket": "quick",
+    "cost": 1,
+    "place": "either",
+    "points": 10,
+    "level": "easy",
+    "title": {
+      "en": "Learn to juggle three objects",
+      "hy": "Սովորեք ձեռնածություն անել երեք առարկայով",
+      "ru": "Научитесь жонглировать тремя предметами"
+    }
+  },
+  {
+    "id": 32,
+    "category": "games",
+    "min_people": 3,
+    "hours_min": 2,
+    "hours_max": 2,
+    "time_bucket": "short",
+    "cost": 2,
+    "place": "in",
+    "points": 15,
+    "level": "easy",
+    "title": {
+      "en": "Learn and play a board game none of you knows",
+      "hy": "Սովորեք և խաղացեք սեղանի խաղ, որը ձեզնից ոչ ոք չգիտի",
+      "ru": "Освойте и сыграйте в настольную игру, которую никто из вас не знает"
+    }
+  },
+  {
+    "id": 33,
+    "category": "games",
+    "min_people": 3,
+    "hours_min": 2,
+    "hours_max": 2,
+    "time_bucket": "short",
+    "cost": 3,
+    "place": "in",
+    "points": 25,
+    "level": "spicy",
+    "title": {
+      "en": "Escape room",
+      "hy": "Էսքեյփ-ռում",
+      "ru": "Квест-комната"
+    }
+  },
+  {
+    "id": 34,
+    "category": "games",
+    "min_people": 3,
+    "hours_min": 2,
+    "hours_max": 2,
+    "time_bucket": "short",
+    "cost": 2,
+    "place": "in",
+    "points": 15,
+    "level": "easy",
+    "title": {
+      "en": "Bowling, karting, or laser tag",
+      "hy": "Բոուլինգ, կարտինգ կամ լազերային թեգ",
+      "ru": "Боулинг, картинг или лазертаг"
+    }
+  },
+  {
+    "id": 35,
+    "category": "games",
+    "min_people": 4,
+    "hours_min": 2,
+    "hours_max": 2,
+    "time_bucket": "short",
+    "cost": 1,
+    "place": "either",
+    "points": 25,
+    "level": "spicy",
+    "title": {
+      "en": "Organize a scavenger hunt for the others",
+      "hy": "Կազմակերպեք գանձի որոնում մյուսների համար",
+      "ru": "Устройте для остальных охоту за сокровищами"
+    }
+  },
+  {
+    "id": 36,
+    "category": "games",
+    "min_people": 3,
+    "hours_min": 2,
+    "hours_max": 2,
+    "time_bucket": "short",
+    "cost": 1,
+    "place": "in",
+    "points": 15,
+    "level": "easy",
+    "title": {
+      "en": "Trivia night: everyone writes 5 questions about themselves",
+      "hy": "Վիկտորինայի երեկո․ ամեն մեկը գրում է 5 հարց իր մասին",
+      "ru": "Вечер викторины: каждый пишет 5 вопросов о себе"
+    }
+  },
+  {
+    "id": 37,
+    "category": "games",
+    "min_people": 4,
+    "hours_min": 2,
+    "hours_max": 2,
+    "time_bucket": "short",
+    "cost": 1,
+    "place": "out",
+    "points": 25,
+    "level": "spicy",
+    "title": {
+      "en": "Mini-olympics: 5 silly events, medals included",
+      "hy": "Մինի-օլիմպիադա․ 5 հիմար մրցաձև, մեդալներով",
+      "ru": "Мини-олимпиада: 5 дурацких дисциплин, с медалями"
+    }
+  },
+  {
+    "id": 38,
+    "category": "games",
+    "min_people": 4,
+    "hours_min": 2,
+    "hours_max": 2,
+    "time_bucket": "short",
+    "cost": 1,
+    "place": "out",
+    "points": 20,
+    "level": "spicy",
+    "title": {
+      "en": "Play a sport none of you has played before",
+      "hy": "Խաղացեք մի սպորտաձև, որը ձեզնից ոչ ոք չի խաղացել",
+      "ru": "Сыграйте в спорт, в который никто из вас ещё не играл"
+    }
+  },
+  {
+    "id": 39,
+    "category": "social",
+    "min_people": 2,
+    "hours_min": 4,
+    "hours_max": 4,
+    "time_bucket": "half",
+    "cost": 1,
+    "place": "either",
+    "points": 40,
+    "level": "extreme",
+    "title": {
+      "en": "Volunteer together for half a day",
+      "hy": "Կես օր միասին կամավոր աշխատեք",
+      "ru": "Поработайте вместе волонтёрами полдня"
+    }
+  },
+  {
+    "id": 40,
+    "category": "social",
+    "min_people": 2,
+    "hours_min": 2,
+    "hours_max": 2,
+    "time_bucket": "short",
+    "cost": 1,
+    "place": "out",
+    "points": 30,
+    "level": "spicy",
+    "title": {
+      "en": "Clean up a park, beach, or street, with before/after photos",
+      "hy": "Մաքրեք այգի, լողափ կամ փողոց՝ «առաջ/հետո» լուսանկարներով",
+      "ru": "Уберите парк, пляж или улицу, с фото до и после"
+    }
+  },
+  {
+    "id": 41,
+    "category": "social",
+    "min_people": 3,
+    "hours_min": 3,
+    "hours_max": 3,
+    "time_bucket": "short",
+    "cost": 1,
+    "place": "either",
+    "points": 25,
+    "level": "spicy",
+    "title": {
+      "en": "Each person brings someone the group has never met",
+      "hy": "Ամեն մեկը բերում է մեկին, ում խումբը երբեք չի հանդիպել",
+      "ru": "Каждый приводит человека, которого группа ещё не знает"
+    }
+  },
+  {
+    "id": 42,
+    "category": "social",
+    "min_people": 1,
+    "hours_min": 1,
+    "hours_max": 1,
+    "time_bucket": "quick",
+    "cost": 1,
+    "place": "either",
+    "points": 20,
+    "level": "spicy",
+    "title": {
+      "en": "Call or visit an older relative and ask about their youth",
+      "hy": "Զանգեք կամ այցելեք տարեց հարազատի և հարցրեք նրա երիտասարդության մասին",
+      "ru": "Позвоните или навестите старшего родственника и расспросите о его молодости"
+    }
+  },
+  {
+    "id": 43,
+    "category": "social",
+    "min_people": 2,
+    "hours_min": 3,
+    "hours_max": 3,
+    "time_bucket": "short",
+    "cost": 2,
+    "place": "either",
+    "points": 20,
+    "level": "spicy",
+    "title": {
+      "en": "Go to a local event you'd normally skip (concert, festival, match)",
+      "hy": "Գնացեք տեղական միջոցառման, որը սովորաբար բաց կթողնեիք (համերգ, փառատոն, խաղ)",
+      "ru": "Сходите на местное событие, которое обычно пропускаете (концерт, фестиваль, матч)"
+    }
+  },
+  {
+    "id": 44,
+    "category": "spicy",
+    "min_people": 3,
+    "hours_min": 3,
+    "hours_max": 3,
+    "time_bucket": "short",
+    "cost": 1,
+    "place": "either",
+    "points": 25,
+    "level": "spicy",
+    "title": {
+      "en": "Phone-free evening: phones in a box at the door",
+      "hy": "Երեկո առանց հեռախոսների․ բոլոր հեռախոսները՝ դռան մոտ տուփի մեջ",
+      "ru": "Вечер без телефонов: все телефоны в коробку у двери"
+    }
+  },
+  {
+    "id": 45,
+    "category": "spicy",
+    "min_people": 3,
+    "hours_min": 3,
+    "hours_max": 3,
+    "time_bucket": "short",
+    "cost": 1,
+    "place": "either",
+    "points": 20,
+    "level": "spicy",
+    "title": {
+      "en": "Swap roles: the quietest person plans and leads the whole evening",
+      "hy": "Դերերի փոխանակում․ ամենալուռը պլանավորում և ղեկավարում է ամբողջ երեկոն",
+      "ru": "Смена ролей: самый тихий планирует и ведёт весь вечер"
+    }
+  },
+  {
+    "id": 46,
+    "category": "spicy",
+    "min_people": 2,
+    "hours_min": 3,
+    "hours_max": 3,
+    "time_bucket": "short",
+    "cost": 2,
+    "place": "either",
+    "points": 30,
+    "level": "spicy",
+    "title": {
+      "en": "Say yes to everything for one evening (within reason)",
+      "hy": "Մեկ երեկո ասեք «այո» ամեն ինչին (ողջամտության սահմաններում)",
+      "ru": "Говорите «да» всему один вечер (в пределах разумного)"
+    }
+  },
+  {
+    "id": 47,
+    "category": "spicy",
+    "min_people": 3,
+    "hours_min": 2,
+    "hours_max": 2,
+    "time_bucket": "short",
+    "cost": 2,
+    "place": "in",
+    "points": 25,
+    "level": "spicy",
+    "title": {
+      "en": "Karaoke, and everyone sings at least once",
+      "hy": "Կարաոկե, և բոլորը գոնե մեկ անգամ երգում են",
+      "ru": "Караоке, и каждый поёт хотя бы раз"
+    }
+  },
+  {
+    "id": 48,
+    "category": "spicy",
+    "min_people": 1,
+    "hours_min": 0.5,
+    "hours_max": 0.5,
+    "time_bucket": "quick",
+    "cost": 1,
+    "place": "either",
+    "points": 15,
+    "level": "easy",
+    "title": {
+      "en": "Cold plunge or cold shower challenge",
+      "hy": "Սառը ջրի մեջ մտնելու կամ սառը ցնցուղի մարտահրավեր",
+      "ru": "Челлендж: холодная купель или ледяной душ"
+    }
+  },
+  {
+    "id": 49,
+    "category": "spicy",
+    "min_people": 2,
+    "hours_min": 3,
+    "hours_max": 3,
+    "time_bucket": "short",
+    "cost": 1,
+    "place": "out",
+    "points": 30,
+    "level": "spicy",
+    "title": {
+      "en": "Get on a random bus or train and get off at a stop you've never been to",
+      "hy": "Նստեք պատահական ավտոբուս կամ գնացք և իջեք մի կանգառում, որտեղ երբեք չեք եղել",
+      "ru": "Сядьте в случайный автобус или поезд и выйдите на остановке, где никогда не были"
+    }
+  },
+  {
+    "id": 50,
+    "category": "spicy",
+    "min_people": 2,
+    "hours_min": 3,
+    "hours_max": 3,
+    "time_bucket": "short",
+    "cost": 1,
+    "place": "out",
+    "points": 30,
+    "level": "spicy",
+    "title": {
+      "en": "Wake up at 5am and go do something",
+      "hy": "Արթնացեք առավոտյան 5-ին և գնացեք ինչ-որ բան անելու",
+      "ru": "Встаньте в 5 утра и идите что-нибудь делать"
+    }
+  },
+  {
+    "id": 51,
+    "category": "quick",
+    "min_people": 2,
+    "hours_min": 1,
+    "hours_max": 1,
+    "time_bucket": "quick",
+    "cost": 1,
+    "place": "out",
+    "points": 5,
+    "level": "easy",
+    "title": {
+      "en": "Walk somewhere new instead of sitting at the usual place",
+      "hy": "Սովորական տեղում նստելու փոխարեն քայլեք մի նոր տեղ",
+      "ru": "Прогуляйтесь куда-нибудь в новое место вместо обычного"
+    }
+  },
+  {
+    "id": 52,
+    "category": "quick",
+    "min_people": 2,
+    "hours_min": 0.5,
+    "hours_max": 0.5,
+    "time_bucket": "quick",
+    "cost": 1,
+    "place": "either",
+    "points": 5,
+    "level": "easy",
+    "title": {
+      "en": "Swap your usual drink or snack for something nobody has tried",
+      "hy": "Ձեր սովորական ըմպելիքը կամ խորտիկը փոխեք մի բանով, որը ոչ ոք չի փորձել",
+      "ru": "Замените привычный напиток или снек на то, что никто не пробовал"
+    }
+  },
+  {
+    "id": 53,
+    "category": "quick",
+    "min_people": 3,
+    "hours_min": 1,
+    "hours_max": 1,
+    "time_bucket": "quick",
+    "cost": 1,
+    "place": "in",
+    "points": 5,
+    "level": "easy",
+    "title": {
+      "en": "Each person shares a song nobody else knows; listen properly",
+      "hy": "Ամեն մեկը միացնում է մի երգ, որը ուրիշները չգիտեն․ լսեք ուշադիր",
+      "ru": "Каждый ставит песню, которую никто не знает; слушайте по-настоящему"
+    }
+  },
+  {
+    "id": 54,
+    "category": "quick",
+    "min_people": 2,
+    "hours_min": 1,
+    "hours_max": 1,
+    "time_bucket": "quick",
+    "cost": 1,
+    "place": "in",
+    "points": 10,
+    "level": "easy",
+    "title": {
+      "en": "36 questions: take turns asking deep questions",
+      "hy": "36 հարց․ հերթով տվեք խորը հարցեր",
+      "ru": "36 вопросов: по очереди задавайте глубокие вопросы"
+    }
+  },
+  {
+    "id": 55,
+    "category": "quick",
+    "min_people": 3,
+    "hours_min": 0.5,
+    "hours_max": 0.5,
+    "time_bucket": "quick",
+    "cost": 1,
+    "place": "in",
+    "points": 5,
+    "level": "easy",
+    "title": {
+      "en": "Rearrange the room you always hang out in",
+      "hy": "Վերադասավորեք այն սենյակը, որտեղ միշտ հավաքվում եք",
+      "ru": "Переставьте мебель в комнате, где вы всегда собираетесь"
+    }
+  },
+  {
+    "id": 56,
+    "category": "quick",
+    "min_people": 3,
+    "hours_min": 1,
+    "hours_max": 1,
+    "time_bucket": "quick",
+    "cost": 1,
+    "place": "either",
+    "points": 10,
+    "level": "easy",
+    "title": {
+      "en": "Teach the group a game from your childhood",
+      "hy": "Խմբին սովորեցրեք ձեր մանկության խաղերից մեկը",
+      "ru": "Научите группу игре из вашего детства"
+    }
+  },
+  {
+    "id": 57,
+    "category": "quick",
+    "min_people": 2,
+    "hours_min": 0.5,
+    "hours_max": 0.5,
+    "time_bucket": "quick",
+    "cost": 1,
+    "place": "in",
+    "points": 10,
+    "level": "easy",
+    "title": {
+      "en": "Everyone writes a letter to themselves to open in a year",
+      "hy": "Ամեն մեկը նամակ է գրում իրեն, որը կբացի մեկ տարի հետո",
+      "ru": "Каждый пишет письмо себе, которое откроет через год"
+    }
+  },
+  {
+    "id": 58,
+    "category": "quick",
+    "min_people": 3,
+    "hours_min": 1,
+    "hours_max": 1,
+    "time_bucket": "quick",
+    "cost": 1,
+    "place": "in",
+    "points": 10,
+    "level": "easy",
+    "title": {
+      "en": "Plan the group's next trip together, budget included",
+      "hy": "Միասին պլանավորեք խմբի հաջորդ ճամփորդությունը՝ բյուջեով հանդերձ",
+      "ru": "Спланируйте вместе следующую поездку группы, с бюджетом"
+    }
+  },
+  {
+    "id": 59,
+    "category": "quick",
+    "min_people": 2,
+    "hours_min": 0.5,
+    "hours_max": 0.5,
+    "time_bucket": "quick",
+    "cost": 1,
+    "place": "either",
+    "points": 10,
+    "level": "easy",
+    "title": {
+      "en": "Group workout: 30 minutes, anything",
+      "hy": "Խմբային մարզում․ 30 րոպե, ցանկացած բան",
+      "ru": "Групповая тренировка: 30 минут, что угодно"
+    }
+  },
+  {
+    "id": 60,
+    "category": "quick",
+    "min_people": 3,
+    "hours_min": 0.5,
+    "hours_max": 0.5,
+    "time_bucket": "quick",
+    "cost": 1,
+    "place": "either",
+    "points": 10,
+    "level": "easy",
+    "title": {
+      "en": "Recreate an old group photo, same poses",
+      "hy": "Վերստեղծեք հին խմբային լուսանկարը՝ նույն դիրքերով",
+      "ru": "Воссоздайте старое общее фото, в тех же позах"
+    }
+  }
+]

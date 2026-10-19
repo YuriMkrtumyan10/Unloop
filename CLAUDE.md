@@ -25,10 +25,11 @@ Full product context lives in `docs/`: product brief, decisions log, challenge l
 - No hard-coded UI text: every string goes in `messages/en.json`, `messages/hy.json`, `messages/ru.json`. Check Armenian and Russian layouts too; they run longer than English.
 
 ## Commands
-_(fill in once the project is created)_
-- `npm run dev`: run locally
+- `npm run dev`: run locally (needs `.env.local`, see `.env.example`)
 - `npm run build`: production build
 - `npm run lint`: lint
+- `node scripts/seed-sql.mjs > supabase/migrations/<timestamp>_seed_challenges.sql`: turn `supabase/seed/challenges.json` into a seed migration after editing challenges
+- `CHROMIUM_PATH=<chrome binary> node scripts/make-icons.mjs`: re-render the app icons
 
 ## Working rules
 - MVP scope only (see product brief). Suggest extras; don't build them unasked.
