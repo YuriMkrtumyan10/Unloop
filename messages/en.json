@@ -5,23 +5,43 @@
   "nav": {
     "spin": "Spin",
     "scrapbook": "Scrapbook",
-    "leaderboard": "Leaderboard"
+    "leaderboard": "Leaderboard",
+    "account": "Account"
   },
   "welcome": {
     "taglineSame": "Same place. Same game. Same night.",
     "taglineNot": "Not tonight.",
     "pitch": "Spin a challenge, go do it with your crew, keep the proof.",
     "google": "Continue with Google",
-    "email": "Continue with email",
-    "emailLabel": "Your email",
+    "emailLabel": "Email",
     "emailPlaceholder": "you@example.com",
-    "sendLink": "Send me a magic link",
-    "back": "Never mind",
+    "back": "Back",
     "checkInbox": "Check your inbox",
-    "linkSent": "We sent a sign-in link to {email}. Open it on this phone.",
-    "tryAgain": "Wrong email? Try again",
     "error": "That didn't work. Give it another go.",
-    "inviteHint": "Got an invite link? Open it after you sign in and you'll land in the group."
+    "inviteHint": "Got an invite link? Open it after you sign in and you'll land in the group.",
+    "login": "Log in",
+    "signup": "Sign up",
+    "or": "or",
+    "loginTitle": "Welcome back",
+    "signupTitle": "Create your account",
+    "forgotTitle": "Reset your password",
+    "forgotText": "Enter your email and we'll send you a link to set a new password.",
+    "passwordLabel": "Password",
+    "passwordHint": "At least 8 characters",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "loginCta": "Log in",
+    "signupCta": "Create account",
+    "sendReset": "Send reset link",
+    "forgot": "Forgot password?",
+    "toSignup": "New here? Sign up",
+    "toLogin": "Already have an account? Log in",
+    "confirmSent": "We sent a link to {email}. Tap it to confirm your email and you're in.",
+    "confirmedLogin": "Already confirmed? Log in",
+    "resetSent": "If there's an account for {email}, a link to set a new password is on its way.",
+    "backToLogin": "Back to log in",
+    "linkError": "That link didn't work here. If you just confirmed your email, log in below.",
+    "resetError": "That reset link didn't work here. Ask for a fresh one below."
   },
   "group": {
     "title": "Who's breaking the loop with you?",
@@ -154,8 +174,32 @@
     "nudge": "{name}, one Extreme challenge and you're out of last place."
   },
   "settings": {
-    "inviteMore": "Invite more friends",
-    "signOut": "Sign out"
+    "inviteMore": "Invite more friends"
+  },
+  "account": {
+    "title": "Account",
+    "profile": "Profile",
+    "yourColor": "Your color",
+    "colorN": "Color {n}",
+    "save": "Save",
+    "saved": "Saved",
+    "signIn": "Sign-in",
+    "changePassword": "Change password",
+    "newPassword": "New password",
+    "savePassword": "Save password",
+    "passwordSaved": "Password updated.",
+    "passwordSet": "Saved. Taking you in…",
+    "cancel": "Cancel",
+    "changeEmail": "Change email",
+    "language": "Language",
+    "more": "More",
+    "notifications": "Notifications",
+    "leaveCrew": "Leave crew",
+    "deleteAccount": "Delete account",
+    "soon": "Soon",
+    "signOut": "Sign out",
+    "newPasswordTitle": "Set a new password",
+    "newPasswordText": "Pick one you'll remember. You'll use it to log in on any phone."
   },
   "errors": {
     "generic": "Something went sideways. Try again.",
@@ -164,6 +208,14 @@
     "nothingFits": "Nothing fits those filters. Loosen one up and spin again.",
     "nothingElse": "That was the only one that fits. Looks like fate.",
     "nobody": "Tick at least one person who showed up.",
-    "upload": "The photo didn't upload. Try again, or log it without one."
+    "upload": "The photo didn't upload. Try again, or log it without one.",
+    "wrongLogin": "Wrong email or password.",
+    "notConfirmed": "Confirm your email first. The link is in your inbox.",
+    "userExists": "There's already an account with that email. Log in instead.",
+    "weakPassword": "That password is too short. Use at least 8 characters.",
+    "samePassword": "That's your current password. Pick a new one.",
+    "tooMany": "Too many tries. Wait a minute and try again.",
+    "emailFailed": "We couldn't send the email. Try again later.",
+    "badName": "Your name can't be empty."
   }
 }

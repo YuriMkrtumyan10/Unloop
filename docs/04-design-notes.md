@@ -21,6 +21,7 @@ _Starting direction only. We'll design properly before building screens._
 6. **Upload proof:** photo + one-line note
 7. **Group timeline:** scrapbook of completed challenges
 8. **Leaderboard:** points per person
+9. **Account:** name, avatar color, password, language, sign out (fourth bottom tab, added 2026-10-19)
 
 ## Mobile first
 Almost everyone will use it on a phone. Design for phone screens first; desktop is a bonus.

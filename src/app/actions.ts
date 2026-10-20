@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { createClient } from "@/lib/supabase/server";
 import { GROUP_COOKIE } from "@/lib/group";
+import { isAvatarColor } from "@/lib/colors";
 import { isLocale, LOCALE_COOKIE } from "@/i18n/config";
 import type { SpinFilters } from "@/lib/types";
 
@@ -89,6 +90,21 @@ export async function completeRun(runId: string, participantIds: string[], photo
   });
   if (error) return { error: "generic" };
   redirect("/scrapbook");
+}
+
+export async function updateProfile(name: string, color: string): Promise<{ error?: string }> {
+  const clean = name.trim().slice(0, 40);
+  if (!clean) return { error: "badName" };
+  if (!isAvatarColor(color)) return { error: "generic" };
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return { error: "generic" };
+  const { error } = await supabase.from("profiles").update({ display_name: clean, color }).eq("id", user.id);
+  if (error) return { error: "generic" };
+  revalidatePath("/", "layout");
+  return {};
 }
 
 export async function signOut() {
