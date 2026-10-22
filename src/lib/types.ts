@@ -29,6 +29,18 @@ export type Group = {
   id: string;
   name: string;
   invite_code: string;
+  /** A one-person "Just me" space: no invite link, no leaving, never in search. */
+  solo: boolean;
+};
+
+export type Role = "admin" | "member";
+
+/** A crew as search shows it to someone outside: no invite code, no members' names. */
+export type CrewHit = {
+  id: string;
+  name: string;
+  members: number;
+  status: "member" | "requested" | null;
 };
 
 export type Run = {

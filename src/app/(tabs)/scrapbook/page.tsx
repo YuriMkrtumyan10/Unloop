@@ -5,6 +5,7 @@ import { requireGroup } from "@/lib/group";
 import { formatDay, formatMonth } from "@/lib/format";
 import type { Challenge, Run } from "@/lib/types";
 import { categoryColor } from "@/components/CategoryBadge";
+import { CrewLink } from "@/components/CrewLink";
 import { Polaroid } from "@/components/Polaroid";
 
 type DoneRun = Run & { challenges: Challenge; run_participants: { points: number }[] };
@@ -41,7 +42,7 @@ export default async function ScrapbookPage() {
   return (
     <div className="flex grow flex-col">
       <header className="flex flex-col gap-1 px-6 pt-[52px] pb-4">
-        <span className="text-[13px] font-medium text-muted">{group.name}</span>
+        <CrewLink group={group} />
         <div className="flex items-baseline justify-between gap-3">
           <h1 className="font-display text-[26px] font-bold">{t("title")}</h1>
           <span className="text-sm font-semibold text-lime">{t("count", { n: runs.length })}</span>

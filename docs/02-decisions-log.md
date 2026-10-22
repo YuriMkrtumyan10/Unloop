@@ -87,3 +87,24 @@ Format: date · decision · why · status
 **Needs:** Supabase's built-in email only reaches members of the Supabase team, so friends get sign-up and reset emails only once a custom email sender (SMTP) is set up in Supabase.
 **Status:** ✅ Decided (Yuri, 2026-10-19)
 
+
+### 2026-10-22 · Solo play: a crew is optional
+**Decision:** After sign-up you give your name, then pick "Just me for now", start a crew, find one by name, or paste an invite link. "Just me" is your own private space with its own spin, scrapbook and points. It never shows in search and can't be joined or left. You can start or join a crew any time from the Crews tab.
+**Why:** Yuri wants people to be able to use the app alone without being forced to create a group. Matches the brief's secondary audience (solo mode).
+**Open:** whether solo points also count on crew leaderboards (built as: no, solo keeps its own score), and whether to write solo challenges (only 4 of the 60 fit one person). Waiting on Yuri.
+**Status:** ✅ Decided (Yuri, 2026-10-22)
+
+### 2026-10-22 · Several crews per person, with a Crews tab
+**Decision:** You can be in any number of crews. A fifth bottom tab, Crews, lists Just me and every crew you're in; tapping the crew name at the top of Spin, Scrapbook or Leaderboard also goes there. Each crew has a page with its members, invite link and Leave crew. "Spin with this crew" picks which crew the other tabs show (remembered on that phone).
+**Why:** Yuri asked for it: friends belong to more than one group.
+**Status:** ✅ Decided (Yuri, 2026-10-22)
+
+### 2026-10-22 · Find a crew by name and ask to join
+**Decision:** Anyone signed in can search crews by name and tap "Ask to join". Search shows only the crew's name and member count. Each crew has one admin (whoever created it), who lets people in or says "Not now" on the crew page; a dot on the Crews tab shows waiting requests. Invite links still let friends straight in, no request needed.
+**Why:** Yuri asked for a way to join a crew without an invite link.
+**Status:** ✅ Decided (Yuri, 2026-10-22)
+
+### 2026-10-22 · Leaving a crew
+**Decision:** Leave crew works, with an "are you sure" step. Your past challenges stay in that crew's scrapbook and you drop off its leaderboard (rejoining brings your points back). When the admin leaves, the member who joined first becomes admin (built this way; waiting on Yuri to confirm). When the last person leaves, the crew disappears from search, but its invite link still works.
+**Why:** The button was on the Account tab but did nothing.
+**Status:** ✅ Decided (Yuri, 2026-10-22)

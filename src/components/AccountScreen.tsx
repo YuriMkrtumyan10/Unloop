@@ -1,19 +1,20 @@
 import { useTranslations } from "next-intl";
 import { signOut } from "@/app/actions";
-import type { Profile } from "@/lib/types";
+import type { Group, Profile } from "@/lib/types";
 import { sectionHeading } from "@/lib/ui";
+import { CrewLink } from "./CrewLink";
 import { LanguageSwitch } from "./LanguageSwitch";
 import { PasswordForm } from "./PasswordForm";
 import { ProfileForm } from "./ProfileForm";
 import { SoonRow } from "./SoonRow";
 
 /** The Account tab: profile, password, language, sign out, and rows for what's coming later. */
-export function AccountScreen({ profile, email, groupName }: { profile: Profile; email: string; groupName: string }) {
+export function AccountScreen({ profile, email, group }: { profile: Profile; email: string; group: Group }) {
   const t = useTranslations("account");
   return (
     <div className="flex grow flex-col gap-7 px-6 pt-[52px] pb-8">
       <header className="flex flex-col gap-1">
-        <span className="truncate text-[13px] font-medium text-muted">{groupName}</span>
+        <CrewLink group={group} />
         <h1 className="font-display text-[26px] font-bold">{t("title")}</h1>
       </header>
 
@@ -33,7 +34,6 @@ export function AccountScreen({ profile, email, groupName }: { profile: Profile;
       <section className="flex flex-col gap-2.5">
         <h2 className={sectionHeading}>{t("more")}</h2>
         <SoonRow icon="bell" label={t("notifications")} />
-        <SoonRow icon="leave" label={t("leaveCrew")} />
         <SoonRow icon="trash" label={t("deleteAccount")} danger />
       </section>
 

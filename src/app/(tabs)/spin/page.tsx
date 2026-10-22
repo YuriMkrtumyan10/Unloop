@@ -3,6 +3,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { requireGroup } from "@/lib/group";
 import type { Challenge } from "@/lib/types";
 import type { Locale } from "@/i18n/config";
+import { CrewLink } from "@/components/CrewLink";
 import { Icon } from "@/components/Icon";
 import { SpinForm } from "@/components/SpinForm";
 
@@ -21,9 +22,7 @@ export default async function SpinPage() {
     <div className="flex grow flex-col">
       <header className="flex items-center justify-between gap-3 px-6 pt-[52px]">
         <div className="flex min-w-0 flex-col gap-0.5">
-          <span className="truncate text-[13px] font-medium text-muted">
-            {group.name} · {crew.length}
-          </span>
+          <CrewLink group={group} suffix={group.solo ? undefined : String(crew.length)} />
           <span className="font-display text-[22px] font-bold">{t("greeting")}</span>
         </div>
         <span className="flex shrink-0 items-center gap-1.5 rounded-full bg-card px-3 py-2 text-sm font-bold text-lime">

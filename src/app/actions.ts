@@ -7,7 +7,7 @@ import { createClient } from "@/lib/supabase/server";
 import { GROUP_COOKIE } from "@/lib/group";
 import { isAvatarColor } from "@/lib/colors";
 import { isLocale, LOCALE_COOKIE } from "@/i18n/config";
-import type { SpinFilters } from "@/lib/types";
+import type { CrewHit, SpinFilters } from "@/lib/types";
 
 const YEAR = 60 * 60 * 24 * 365;
 
@@ -31,16 +31,79 @@ async function rememberGroup(groupId: string) {
   (await cookies()).set(GROUP_COOKIE, groupId, { path: "/", maxAge: YEAR, sameSite: "lax" });
 }
 
-export async function createGroup(name: string, myName: string): Promise<{ error?: string; inviteCode?: string }> {
+export async function createGroup(name: string, myName?: string): Promise<{ error?: string; groupId?: string; inviteCode?: string }> {
   const groupName = name.trim();
   if (!groupName) return { error: "needName" };
-  await saveName(myName);
+  if (myName !== undefined) await saveName(myName);
   const supabase = await createClient();
   const { data: groupId, error } = await supabase.rpc("create_group", { group_name: groupName.slice(0, 40) });
   if (error || !groupId) return { error: "generic" };
   await rememberGroup(groupId);
+  revalidatePath("/", "layout");
   const { data } = await supabase.from("groups").select("invite_code").eq("id", groupId).single();
-  return { inviteCode: data?.invite_code };
+  return { groupId, inviteCode: data?.invite_code };
+}
+
+/** Your "Just me" space: made the first time, then it's the one you're playing with. */
+export async function goSolo(myName?: string): Promise<{ error?: string }> {
+  if (myName !== undefined) await saveName(myName);
+  const supabase = await createClient();
+  const { data: groupId, error } = await supabase.rpc("ensure_solo");
+  if (error || !groupId) return { error: "generic" };
+  await rememberGroup(groupId);
+  redirect("/spin");
+}
+
+/** Makes this crew the one that Spin, Scrapbook and Leaderboard show. */
+export async function switchCrew(groupId: string) {
+  await rememberGroup(groupId);
+  redirect("/spin");
+}
+
+export async function searchCrews(query: string): Promise<CrewHit[]> {
+  const q = query.trim().slice(0, 40);
+  if (q.length < 2) return [];
+  const supabase = await createClient();
+  const { data } = await supabase.rpc("search_groups", { q });
+  return (data ?? []) as CrewHit[];
+}
+
+const crewErrors: Record<string, string> = { not_admin: "notAdmin", no_request: "noRequest", already_in: "alreadyIn", no_such_crew: "noSuchCrew" };
+
+export async function requestJoin(groupId: string, myName?: string): Promise<{ error?: string }> {
+  if (myName !== undefined) await saveName(myName);
+  const supabase = await createClient();
+  const { error } = await supabase.rpc("request_join", { gid: groupId });
+  if (error) return { error: crewErrors[error.message] ?? "generic" };
+  revalidatePath("/crews");
+  return {};
+}
+
+export async function cancelRequest(groupId: string): Promise<{ error?: string }> {
+  const supabase = await createClient();
+  const { error } = await supabase.rpc("cancel_request", { gid: groupId });
+  if (error) return { error: "generic" };
+  revalidatePath("/crews");
+  return {};
+}
+
+/** The admin lets someone in, or says no. */
+export async function answerRequest(groupId: string, userId: string, accept: boolean): Promise<{ error?: string }> {
+  const supabase = await createClient();
+  const { error } = await supabase.rpc("answer_request", { gid: groupId, uid: userId, accept });
+  if (error) return { error: crewErrors[error.message] ?? "generic" };
+  revalidatePath("/", "layout");
+  return {};
+}
+
+export async function leaveCrew(groupId: string): Promise<{ error?: string }> {
+  const supabase = await createClient();
+  const { error } = await supabase.rpc("leave_group", { gid: groupId });
+  if (error) return { error: "generic" };
+  const jar = await cookies();
+  if (jar.get(GROUP_COOKIE)?.value === groupId) jar.delete(GROUP_COOKIE);
+  revalidatePath("/", "layout");
+  redirect("/crews");
 }
 
 /** Accepts a bare code or a full invite link. */

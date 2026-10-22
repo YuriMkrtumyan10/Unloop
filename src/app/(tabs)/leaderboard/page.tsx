@@ -1,13 +1,42 @@
+import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { requireGroup } from "@/lib/group";
 import { Avatar } from "@/components/Avatar";
+import { CrewLink } from "@/components/CrewLink";
 import { InviteSection } from "@/components/InviteSection";
 import { Icon } from "@/components/Icon";
 import { Podium, type Standing } from "@/components/Podium";
 
 export default async function LeaderboardPage() {
-  const { supabase, group, crew } = await requireGroup();
+  const { supabase, group, crew, me } = await requireGroup();
   const t = await getTranslations("leaderboard");
+
+  // Just me: a scoreboard of one, and a nudge to bring rivals.
+  if (group.solo) {
+    const { data: mine } = await supabase.from("leaderboard").select("points, challenges").eq("group_id", group.id).eq("user_id", me.id).maybeSingle();
+    return (
+      <div className="flex grow flex-col gap-6 px-6 pt-[52px] pb-8">
+        <header className="flex flex-col gap-1">
+          <CrewLink group={group} suffix={t("allTime")} />
+          <h1 className="font-display text-[26px] font-bold">{t("title")}</h1>
+        </header>
+        <div className="flex flex-col items-center gap-3 rounded-3xl bg-card px-5 py-7 text-center">
+          <Avatar profile={me} size={72} className="ring-4 ring-lime" />
+          <span className="font-display text-[40px] leading-none font-extrabold text-lime">{mine?.points ?? 0}</span>
+          <span className="text-sm font-semibold text-muted">
+            {t("soloPoints")} · {t("challenges", { n: mine?.challenges ?? 0 })}
+          </span>
+        </div>
+        <div className="flex flex-col items-start gap-3 rounded-3xl border-[1.5px] border-dashed border-line p-5">
+          <p className="font-hand text-2xl leading-tight text-soft">{t("soloJoke")}</p>
+          <p className="text-sm leading-[1.45] font-medium text-muted">{t("soloNote")}</p>
+          <Link href="/crews" className="mt-1 flex min-h-12 items-center rounded-[14px] bg-lime px-5 font-bold text-ink">
+            {t("soloCta")}
+          </Link>
+        </div>
+      </div>
+    );
+  }
 
   const { data } = await supabase.from("leaderboard").select("user_id, points, challenges").eq("group_id", group.id);
   const standings: Standing[] = crew
@@ -24,9 +53,7 @@ export default async function LeaderboardPage() {
   return (
     <div className="flex grow flex-col pb-8">
       <header className="flex flex-col gap-1 px-6 pt-[52px] pb-2">
-        <span className="text-[13px] font-medium text-muted">
-          {group.name} · {t("allTime")}
-        </span>
+        <CrewLink group={group} suffix={t("allTime")} />
         <h1 className="font-display text-[26px] font-bold">{t("title")}</h1>
       </header>
 

@@ -14,7 +14,7 @@ export default async function ProofPage() {
         <BackLink href="/run" />
         <h1 className="font-display text-2xl font-bold">{t("title")}</h1>
       </div>
-      <ProofForm runId={run.id} groupId={group.id} points={challenge.points} crew={crew} />
+      <ProofForm runId={run.id} groupId={group.id} points={challenge.points} crew={crew} solo={group.solo} />
     </main>
   );
 }

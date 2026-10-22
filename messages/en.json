@@ -6,7 +6,9 @@
     "spin": "Spin",
     "scrapbook": "Scrapbook",
     "leaderboard": "Leaderboard",
-    "account": "Account"
+    "account": "Account",
+    "crews": "Crews",
+    "requests": "{n, plural, one {# request to join} other {# requests to join}}"
   },
   "welcome": {
     "taglineSame": "Same place. Same game. Same night.",
@@ -53,11 +55,50 @@
     "letsGo": "Let's spin",
     "haveLink": "already got a link?",
     "pasteLink": "Paste invite link",
-    "join": "Join"
+    "join": "Join",
+    "findCrew": "or find your crew",
+    "noCrewYet": "no crew yet?",
+    "soloCta": "Just me for now",
+    "soloHint": "Spin solo. You can start or join a crew any time."
   },
   "join": {
     "title": "You've been invited. Resistance is futile.",
     "cta": "Join the crew"
+  },
+  "crews": {
+    "title": "Crews",
+    "justMe": "Just me",
+    "justMeHint": "Solo challenges, no crew needed",
+    "yours": "Your crews",
+    "members": "{n, plural, one {# member} other {# members}}",
+    "admin": "Admin",
+    "you": "you",
+    "playingNow": "Playing now",
+    "wantIn": "{n, plural, one {# wants in} other {# want in}}",
+    "waiting": "Waiting for a yes",
+    "cancelRequest": "Cancel",
+    "find": "Find a crew",
+    "searchLabel": "Crew name",
+    "searchPlaceholder": "Search by crew name",
+    "noResults": "No crew by that name. Check the spelling, or ask a friend for their invite link.",
+    "askToJoin": "Ask to join",
+    "requested": "Requested",
+    "youreIn": "You're in",
+    "requestSent": "Knock knock. You're in as soon as their admin says yes.",
+    "start": "Start a new crew",
+    "haveLink": "Got an invite link?",
+    "spinWith": "Spin with this crew",
+    "wantsToJoin": "Wants to join",
+    "accept": "Let in",
+    "reject": "Not now",
+    "theCrew": "The crew",
+    "invite": "Invite friends",
+    "leave": "Leave crew",
+    "leaveConfirm": "Leave {crew}? Your past challenges stay in its scrapbook, and you drop off its leaderboard.",
+    "leaveAdmin": "{name} becomes the admin.",
+    "leaveLast": "Nobody else is here. The crew disappears from search, but its invite link still gets you back in.",
+    "leaveYes": "Yes, leave",
+    "stay": "Stay"
   },
   "invite": {
     "copy": "Copy",
@@ -154,7 +195,9 @@
     "notePlaceholder": "How did it go?",
     "whoShowedUp": "Who actually showed up?",
     "logIt": "Log it · {n} pts each",
+    "logItSolo": "Log it · {n} pts",
     "withPhoto": "Add the photo and it's {n} each.",
+    "withPhotoSolo": "Add the photo and it's {n}.",
     "saving": "Saving…"
   },
   "scrapbook": {
@@ -171,7 +214,11 @@
     "place2": "2nd",
     "place3": "3rd",
     "challenges": "{n, plural, one {# challenge} other {# challenges}}",
-    "nudge": "{name}, one Extreme challenge and you're out of last place."
+    "nudge": "{name}, one Extreme challenge and you're out of last place.",
+    "soloPoints": "solo points",
+    "soloJoke": "A leaderboard of one. You're winning, technically.",
+    "soloNote": "Solo points stay here. Crew leaderboards only count what you do together.",
+    "soloCta": "Bring some rivals"
   },
   "settings": {
     "inviteMore": "Invite more friends"
@@ -194,7 +241,6 @@
     "language": "Language",
     "more": "More",
     "notifications": "Notifications",
-    "leaveCrew": "Leave crew",
     "deleteAccount": "Delete account",
     "soon": "Soon",
     "signOut": "Sign out",
@@ -216,6 +262,10 @@
     "samePassword": "That's your current password. Pick a new one.",
     "tooMany": "Too many tries. Wait a minute and try again.",
     "emailFailed": "We couldn't send the email. Try again later.",
-    "badName": "Your name can't be empty."
+    "badName": "Your name can't be empty.",
+    "notAdmin": "Only the crew's admin can do that.",
+    "noRequest": "That request is already gone.",
+    "alreadyIn": "You're already in that crew.",
+    "noSuchCrew": "That crew isn't around anymore."
   }
 }
