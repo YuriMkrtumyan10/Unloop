@@ -1018,5 +1018,383 @@
       "hy": "Վերստեղծեք հին խմբային լուսանկարը՝ նույն դիրքերով",
       "ru": "Воссоздайте старое общее фото, в тех же позах"
     }
+  },
+  {
+    "id": 61,
+    "category": "outdoors",
+    "min_people": 1,
+    "solo": true,
+    "hours_min": 3,
+    "hours_max": 5,
+    "time_bucket": "half",
+    "cost": 1,
+    "place": "out",
+    "points": 30,
+    "level": "spicy",
+    "title": {
+      "en": "Hike a trail you've never walked, on your own",
+      "hy": "Մենակ անցիր մի արահետով, որով երբեք չես քայլել",
+      "ru": "Пройди в одиночку незнакомую тропу"
+    }
+  },
+  {
+    "id": 62,
+    "category": "outdoors",
+    "min_people": 1,
+    "solo": true,
+    "hours_min": 1.5,
+    "hours_max": 2,
+    "time_bucket": "short",
+    "cost": 1,
+    "place": "out",
+    "points": 15,
+    "level": "easy",
+    "title": {
+      "en": "Watch the sunset from a spot you've never been to",
+      "hy": "Դիմավորիր մայրամուտը մի տեղում, որտեղ երբեք չես եղել",
+      "ru": "Встреть закат в незнакомом месте"
+    }
+  },
+  {
+    "id": 63,
+    "category": "outdoors",
+    "min_people": 1,
+    "solo": true,
+    "hours_min": 1,
+    "hours_max": 1,
+    "time_bucket": "quick",
+    "cost": 1,
+    "place": "out",
+    "points": 10,
+    "level": "easy",
+    "title": {
+      "en": "Coin-flip walk: toss a coin at every corner to pick left or right, for one hour",
+      "hy": "Զբոսանք մետաղադրամով․ ամեն խաչմերուկում նետիր մետաղադրամը՝ ընտրելու ձախ կամ աջ, մեկ ժամ շարունակ",
+      "ru": "Прогулка по монетке: на каждом углу подбрасывай монету, налево или направо, целый час"
+    }
+  },
+  {
+    "id": 64,
+    "category": "food",
+    "min_people": 1,
+    "solo": true,
+    "hours_min": 2,
+    "hours_max": 3,
+    "time_bucket": "short",
+    "cost": 2,
+    "place": "in",
+    "points": 20,
+    "level": "spicy",
+    "title": {
+      "en": "Cook a full meal from a cuisine you've never cooked",
+      "hy": "Պատրաստիր մի ամբողջական ճաշ այնպիսի խոհանոցից, որից երբեք չես պատրաստել",
+      "ru": "Приготовь целый ужин из незнакомой тебе кухни"
+    }
+  },
+  {
+    "id": 65,
+    "category": "food",
+    "min_people": 1,
+    "solo": true,
+    "hours_min": 1.5,
+    "hours_max": 2,
+    "time_bucket": "short",
+    "cost": 2,
+    "place": "in",
+    "points": 20,
+    "level": "spicy",
+    "title": {
+      "en": "Eat alone at a restaurant you've never tried, phone stays in your pocket",
+      "hy": "Մենակ ճաշիր մի ռեստորանում, որտեղ երբեք չես եղել, հեռախոսը՝ գրպանում",
+      "ru": "Сходи в одиночку в новый для тебя ресторан, телефон не доставать"
+    }
+  },
+  {
+    "id": 66,
+    "category": "food",
+    "min_people": 1,
+    "solo": true,
+    "hours_min": 1,
+    "hours_max": 1,
+    "time_bucket": "quick",
+    "cost": 1,
+    "place": "either",
+    "points": 15,
+    "level": "easy",
+    "title": {
+      "en": "Try three foods you've always refused to eat",
+      "hy": "Փորձիր երեք ուտելիք, որոնցից միշտ հրաժարվել ես",
+      "ru": "Съешь три вещи, которые всегда казались тебе несъедобными"
+    }
+  },
+  {
+    "id": 67,
+    "category": "creative",
+    "min_people": 1,
+    "solo": true,
+    "hours_min": 0.5,
+    "hours_max": 0.5,
+    "time_bucket": "quick",
+    "cost": 1,
+    "place": "either",
+    "points": 10,
+    "level": "easy",
+    "title": {
+      "en": "Draw whatever is in front of you for 30 minutes, no erasing",
+      "hy": "30 րոպե նկարիր այն, ինչ քո առջև է, առանց ռետինի",
+      "ru": "Рисуй то, что перед тобой, 30 минут, без ластика"
+    }
+  },
+  {
+    "id": 68,
+    "category": "creative",
+    "min_people": 1,
+    "solo": true,
+    "hours_min": 1,
+    "hours_max": 1,
+    "time_bucket": "quick",
+    "cost": 1,
+    "place": "in",
+    "points": 10,
+    "level": "easy",
+    "title": {
+      "en": "Write a story of exactly 100 words and send it to a friend",
+      "hy": "Գրիր ուղիղ 100 բառից բաղկացած պատմվածք ու ուղարկիր ընկերոջդ",
+      "ru": "Напиши рассказ ровно из 100 слов и отправь другу"
+    }
+  },
+  {
+    "id": 69,
+    "category": "creative",
+    "min_people": 1,
+    "solo": true,
+    "hours_min": 2,
+    "hours_max": 2,
+    "time_bucket": "short",
+    "cost": 1,
+    "place": "out",
+    "points": 15,
+    "level": "easy",
+    "title": {
+      "en": "Photo hunt: 10 photos of one color around the city",
+      "hy": "Ֆոտոորս․ մեկ գույնի 10 լուսանկար ամբողջ քաղաքով",
+      "ru": "Фотоохота: 10 снимков одного цвета по всему городу"
+    }
+  },
+  {
+    "id": 70,
+    "category": "learn",
+    "min_people": 1,
+    "solo": true,
+    "hours_min": 2,
+    "hours_max": 2,
+    "time_bucket": "short",
+    "cost": 2,
+    "place": "in",
+    "points": 25,
+    "level": "spicy",
+    "title": {
+      "en": "Go alone to a class you've never tried: climbing, dance, pottery, anything",
+      "hy": "Մենակ գնա մի դասի, որը երբեք չես փորձել․ մագլցում, պար, խեցեգործություն, ինչ ուզես",
+      "ru": "Сходи в одиночку на незнакомое занятие: скалолазание, танцы, гончарка, что угодно"
+    }
+  },
+  {
+    "id": 71,
+    "category": "learn",
+    "min_people": 1,
+    "solo": true,
+    "hours_min": 2,
+    "hours_max": 3,
+    "time_bucket": "short",
+    "cost": 1,
+    "place": "in",
+    "points": 20,
+    "level": "spicy",
+    "title": {
+      "en": "Learn the first verse of a song on an instrument you don't play",
+      "hy": "Սովորիր որևէ երգի առաջին տունը մի նվագարանով, որով չես նվագում",
+      "ru": "Выучи первый куплет песни на инструменте, на котором не играешь"
+    }
+  },
+  {
+    "id": 72,
+    "category": "games",
+    "min_people": 1,
+    "solo": true,
+    "hours_min": 2,
+    "hours_max": 2,
+    "time_bucket": "short",
+    "cost": 1,
+    "place": "in",
+    "points": 15,
+    "level": "easy",
+    "title": {
+      "en": "Solve a Rubik's cube (a tutorial is allowed)",
+      "hy": "Հավաքիր Ռուբիկի խորանարդը (ուղեցույցով կարելի է)",
+      "ru": "Собери кубик Рубика (с туториалом можно)"
+    }
+  },
+  {
+    "id": 73,
+    "category": "games",
+    "min_people": 1,
+    "solo": true,
+    "hours_min": 1,
+    "hours_max": 1,
+    "time_bucket": "quick",
+    "cost": 1,
+    "place": "out",
+    "points": 25,
+    "level": "spicy",
+    "title": {
+      "en": "Challenge a stranger in the park to a game of backgammon or chess",
+      "hy": "Այգում անծանոթին հրավիրիր մի պարտիա նարդի կամ շախմատ խաղալու",
+      "ru": "Вызови незнакомца в парке на партию в нарды или шахматы"
+    }
+  },
+  {
+    "id": 74,
+    "category": "social",
+    "min_people": 1,
+    "solo": true,
+    "hours_min": 1,
+    "hours_max": 1,
+    "time_bucket": "quick",
+    "cost": 1,
+    "place": "out",
+    "points": 15,
+    "level": "easy",
+    "title": {
+      "en": "Give three strangers a sincere compliment",
+      "hy": "Անկեղծ հաճոյախոսություն արա երեք անծանոթի",
+      "ru": "Сделай искренний комплимент трём незнакомцам"
+    }
+  },
+  {
+    "id": 75,
+    "category": "social",
+    "min_people": 1,
+    "solo": true,
+    "hours_min": 2,
+    "hours_max": 3,
+    "time_bucket": "short",
+    "cost": 1,
+    "place": "either",
+    "points": 30,
+    "level": "spicy",
+    "title": {
+      "en": "Go to a meetup or workshop alone and talk to two new people",
+      "hy": "Մենակ գնա որևէ հանդիպման կամ վորքշոփի ու զրուցիր երկու նոր մարդու հետ",
+      "ru": "Сходи в одиночку на встречу или воркшоп и заговори с двумя новыми людьми"
+    }
+  },
+  {
+    "id": 76,
+    "category": "social",
+    "min_people": 1,
+    "solo": true,
+    "hours_min": 1,
+    "hours_max": 1,
+    "time_bucket": "quick",
+    "cost": 1,
+    "place": "in",
+    "points": 15,
+    "level": "easy",
+    "title": {
+      "en": "Handwrite a letter to someone who mattered to you, and send it",
+      "hy": "Ձեռքով նամակ գրիր մի մարդու, ով կարևոր է եղել քեզ համար, ու ուղարկիր այն",
+      "ru": "Напиши от руки письмо человеку, который много для тебя значил, и отправь его"
+    }
+  },
+  {
+    "id": 77,
+    "category": "spicy",
+    "min_people": 1,
+    "solo": true,
+    "hours_min": 8,
+    "hours_max": 12,
+    "time_bucket": "full",
+    "cost": 1,
+    "place": "either",
+    "points": 40,
+    "level": "extreme",
+    "title": {
+      "en": "Spend a whole day without your phone",
+      "hy": "Մի ամբողջ օր անցկացրու առանց հեռախոսի",
+      "ru": "Проведи целый день без телефона"
+    }
+  },
+  {
+    "id": 78,
+    "category": "spicy",
+    "min_people": 1,
+    "solo": true,
+    "hours_min": 2,
+    "hours_max": 2,
+    "time_bucket": "short",
+    "cost": 2,
+    "place": "in",
+    "points": 20,
+    "level": "spicy",
+    "title": {
+      "en": "Go to the cinema alone and pick the film by its poster",
+      "hy": "Մենակ գնա կինո ու ֆիլմն ընտրիր միայն պաստառով",
+      "ru": "Сходи в кино в одиночку и выбери фильм только по постеру"
+    }
+  },
+  {
+    "id": 79,
+    "category": "spicy",
+    "min_people": 1,
+    "solo": true,
+    "hours_min": 0.5,
+    "hours_max": 0.5,
+    "time_bucket": "quick",
+    "cost": 1,
+    "place": "out",
+    "points": 20,
+    "level": "spicy",
+    "title": {
+      "en": "Ask a stranger to take your portrait, then take theirs",
+      "hy": "Խնդրիր անծանոթին լուսանկարել քեզ, հետո էլ դու լուսանկարիր նրան",
+      "ru": "Попроси незнакомца сфотографировать тебя, а потом сделай портрет в ответ"
+    }
+  },
+  {
+    "id": 80,
+    "category": "spicy",
+    "min_people": 1,
+    "solo": true,
+    "hours_min": 8,
+    "hours_max": 12,
+    "time_bucket": "full",
+    "cost": 2,
+    "place": "out",
+    "points": 40,
+    "level": "extreme",
+    "title": {
+      "en": "Take a day trip alone to a town you've never visited",
+      "hy": "Մենակ մեկ օրով գնա մի քաղաք, որտեղ երբեք չես եղել",
+      "ru": "Съезди в одиночку на день в незнакомый город"
+    }
+  },
+  {
+    "id": 81,
+    "category": "quick",
+    "min_people": 1,
+    "solo": true,
+    "hours_min": 0.5,
+    "hours_max": 0.5,
+    "time_bucket": "quick",
+    "cost": 1,
+    "place": "either",
+    "points": 10,
+    "level": "easy",
+    "title": {
+      "en": "Try a 20-minute workout you've never done: yoga, jump rope, anything",
+      "hy": "Փորձիր 20 րոպեանոց մի մարզում, որը երբեք չես արել․ յոգա, ցատկապարան, ինչ ուզես",
+      "ru": "Попробуй незнакомую 20-минутную тренировку: йога, скакалка, что угодно"
+    }
   }
 ]
