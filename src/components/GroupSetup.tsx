@@ -3,37 +3,32 @@
 import { useState, useTransition } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { createGroup, joinGroup } from "@/app/actions";
+import { goSolo } from "@/app/actions";
+import { CreateCrew, type CreatedCrew } from "./CreateCrew";
+import { CrewSearch } from "./CrewSearch";
 import { Icon } from "./Icon";
 import { InviteBox } from "./InviteBox";
+import { JoinByLink } from "./JoinByLink";
 import { NameField } from "./NameField";
 
+function Divider({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="flex items-center gap-3 text-sm font-medium text-muted">
+      <span className="h-px grow bg-line" />
+      {children}
+      <span className="h-px grow bg-line" />
+    </div>
+  );
+}
+
+/** First stop after sign-up: your name, then start a crew, find one, go solo, or paste an invite link. */
 export function GroupSetup({ defaultName }: { defaultName: string }) {
   const t = useTranslations("group");
   const te = useTranslations("errors");
   const [myName, setMyName] = useState(defaultName);
-  const [groupName, setGroupName] = useState("");
-  const [invite, setInvite] = useState("");
-  const [created, setCreated] = useState<{ code: string; name: string }>();
+  const [created, setCreated] = useState<CreatedCrew>();
   const [error, setError] = useState<string>();
   const [pending, startTransition] = useTransition();
-
-  function create() {
-    setError(undefined);
-    startTransition(async () => {
-      const res = await createGroup(groupName, myName);
-      if (res.error || !res.inviteCode) setError(res.error ?? "generic");
-      else setCreated({ code: res.inviteCode, name: groupName.trim() });
-    });
-  }
-
-  function join() {
-    setError(undefined);
-    startTransition(async () => {
-      const res = await joinGroup(invite, myName);
-      if (res?.error) setError(res.error);
-    });
-  }
 
   if (created) {
     return (
@@ -54,46 +49,38 @@ export function GroupSetup({ defaultName }: { defaultName: string }) {
     <div className="flex flex-col gap-7">
       <NameField value={myName} onChange={setMyName} />
 
-      <div className="flex flex-col gap-3.5 rounded-3xl bg-card p-5">
-        <label htmlFor="gname" className="text-[15px] font-semibold">
-          {t("nameCrew")}
-        </label>
-        <input
-          id="gname"
-          value={groupName}
-          maxLength={40}
-          placeholder={t("crewPlaceholder")}
-          onChange={(e) => setGroupName(e.target.value)}
-          className="min-h-[52px] rounded-[14px] border-[1.5px] border-line bg-ink px-4 text-[17px] font-semibold placeholder:text-dim focus:border-lime focus:outline-none"
-        />
-        <button type="button" onClick={create} disabled={pending || !groupName.trim() || !myName.trim()} className="min-h-[52px] rounded-[14px] bg-lime font-bold text-ink disabled:opacity-60">
-          {t("create")}
+      <CreateCrew myName={myName} onCreated={setCreated} />
+
+      <Divider>{t("findCrew")}</Divider>
+      <CrewSearch myName={myName} />
+
+      <Divider>{t("noCrewYet")}</Divider>
+      <div className="flex flex-col gap-2.5">
+        <button
+          type="button"
+          disabled={pending || !myName.trim()}
+          onClick={() =>
+            startTransition(async () => {
+              setError(undefined);
+              const res = await goSolo(myName);
+              if (res?.error) setError(res.error);
+            })
+          }
+          className="flex min-h-14 items-center justify-center gap-2.5 rounded-[18px] border-[1.5px] border-line bg-card text-[17px] font-semibold disabled:opacity-60"
+        >
+          <Icon name="account" size={20} />
+          {t("soloCta")}
         </button>
+        <p className="text-center text-[13px] font-medium text-muted">{t("soloHint")}</p>
+        {error && (
+          <p role="alert" className="text-center text-sm text-extreme">
+            {te(error as "generic")}
+          </p>
+        )}
       </div>
 
-      <div className="flex items-center gap-3 text-sm font-medium text-muted">
-        <span className="h-px grow bg-line" />
-        {t("haveLink")}
-        <span className="h-px grow bg-line" />
-      </div>
-
-      <div className="flex gap-2">
-        <label htmlFor="join" className="sr-only">
-          {t("pasteLink")}
-        </label>
-        <input
-          id="join"
-          value={invite}
-          placeholder={t("pasteLink")}
-          onChange={(e) => setInvite(e.target.value)}
-          className="min-h-[52px] min-w-0 grow rounded-[14px] border-[1.5px] border-line bg-card px-4 font-medium placeholder:text-muted focus:border-lime focus:outline-none"
-        />
-        <button type="button" onClick={join} disabled={pending || !invite.trim() || !myName.trim()} className="min-h-[52px] rounded-[14px] bg-paper px-5 font-bold text-ink disabled:opacity-60">
-          {t("join")}
-        </button>
-      </div>
-
-      {error && <p role="alert" className="text-sm text-extreme">{te(error as "generic")}</p>}
+      <Divider>{t("haveLink")}</Divider>
+      <JoinByLink myName={myName} />
     </div>
   );
 }

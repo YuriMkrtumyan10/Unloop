@@ -1,6 +1,6 @@
 # Product brief: Unloop
 
-_Status: v0.2. Open questions answered 2026-10-19._
+_Status: v0.3. Open questions answered 2026-10-19; solo mode and several crews added 2026-10-22._
 
 ## 1. The problem
 Friend groups fall into a loop: same place, same activity, same night every week. Nobody hates it, but nobody remembers any of those nights either. Breaking the routine takes effort: someone has to come up with an idea, convince everyone, and plan it. Usually nobody does, so the group defaults to the usual.
@@ -24,7 +24,10 @@ An app that removes the "someone has to come up with an idea" step. Open it, tel
 **In:**
 - Sign up or log in (email and password, or Google), with password reset
 - Account page: name, avatar color, password, language, sign out
-- Create a group and invite friends by link
+- Create a crew and invite friends by link
+- Solo mode: use the app alone ("Just me"), no crew needed
+- Be in several crews and switch between them (Crews tab); leave a crew
+- Find a crew by name and ask to join; the crew's admin lets you in or says no
 - Challenge library (starting with ~60 hand-written challenges, see `03-challenges.md`)
 - Filters: group size, time, budget, indoor/outdoor, difficulty (easy / spicy / extreme)
 - Three languages: English, Armenian, Russian (user picks; challenges translated too)
@@ -41,6 +44,7 @@ An app that removes the "someone has to come up with an idea" step. Open it, tel
 - Location-aware suggestions (nearby trails, restaurants, events)
 - Badges, seasons, streaks
 - Public challenges between different groups
+- Crew admins remove members or hand the admin role to someone else
 - Native App Store / Google Play apps
 
 ## 6. Success for v1

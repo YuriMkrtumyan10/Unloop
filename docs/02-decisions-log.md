@@ -92,3 +92,29 @@ Format: date · decision · why · status
 **Decision:** Going back from a spin doesn't allow a fresh spin with new filters: your spin stays yours until you say "Let's do it" (or use the one re-roll). The Spin screen now shows that waiting spin at the top and dims the Spin button with a short reason, instead of silently reopening it.
 **Why:** Picking Extreme after an unanswered Easy spin brought the Easy one back, which looked like broken filters. Yuri chose to keep the lock and make it visible.
 **Status:** ✅ Decided (Yuri, 2026-10-22)
+
+### 2026-10-22 · Solo play: a crew is optional
+**Decision:** After sign-up you give your name, then pick "Just me for now", start a crew, find one by name, or paste an invite link. "Just me" is your own private space with its own spin, scrapbook and points. It never shows in search and can't be joined or left. You can start or join a crew any time from the Crews tab.
+**Why:** Yuri wants people to be able to use the app alone without being forced to create a group. Matches the brief's secondary audience (solo mode).
+**Points:** solo points stay in Just me. Crew leaderboards only count what you did with that crew (Yuri, 2026-10-22).
+**Status:** ✅ Decided (Yuri, 2026-10-22)
+
+### 2026-10-22 · Several crews per person, with a Crews tab
+**Decision:** You can be in any number of crews. A fifth bottom tab, Crews, lists Just me and every crew you're in; tapping the crew name at the top of Spin, Scrapbook or Leaderboard also goes there. Each crew has a page with its members, invite link and Leave crew. "Spin with this crew" picks which crew the other tabs show (remembered on that phone).
+**Why:** Yuri asked for it: friends belong to more than one group.
+**Status:** ✅ Decided (Yuri, 2026-10-22)
+
+### 2026-10-22 · Find a crew by name and ask to join
+**Decision:** Anyone signed in can search crews by name and tap "Ask to join". Search shows only the crew's name and member count. Each crew has one admin (whoever created it), who lets people in or says "Not now" on the crew page; a dot on the Crews tab shows waiting requests. Invite links still let friends straight in, no request needed.
+**Why:** Yuri asked for a way to join a crew without an invite link.
+**Status:** ✅ Decided (Yuri, 2026-10-22)
+
+### 2026-10-22 · Leaving a crew
+**Decision:** Leave crew works, with an "are you sure" step. Your past challenges stay in that crew's scrapbook and you drop off its leaderboard (rejoining brings your points back). When the admin leaves, the member who joined first becomes admin automatically (Yuri, 2026-10-22). When the last person leaves, the crew disappears from search, but its invite link still works.
+**Why:** The button was on the Account tab but did nothing.
+**Status:** ✅ Decided (Yuri, 2026-10-22)
+
+### 2026-10-22 · Solo challenges
+**Decision:** 21 new challenges (#61–81) written for one person, in English, Armenian and Russian. They're flagged "solo" and only come up when the spin is for 1 person, so a crew never gets "go to the cinema alone".
+**Why:** Only 4 of the first 60 challenges fit one person, so solo mode would run dry within a week.
+**Status:** ✅ Decided (Yuri, 2026-10-22)

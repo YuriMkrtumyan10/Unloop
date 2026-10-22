@@ -12,7 +12,7 @@ import { RevealActions } from "@/components/RevealActions";
 const levelText = { easy: "text-easy", spicy: "text-spicy", extreme: "text-extreme" } as const;
 
 export default async function RunPage() {
-  const { run, challenge, crew, me, spinner } = await requireOpenRun();
+  const { run, challenge, crew, me, spinner, group } = await requireOpenRun();
   const locale = (await getLocale()) as Locale;
   const title = challenge.title[locale];
   const spinnerName = spinner?.display_name ?? "?";
@@ -59,17 +59,19 @@ export default async function RunPage() {
         </span>
       </div>
 
-      <section className="flex flex-col gap-3.5 rounded-3xl bg-card p-5">
-        <div className="flex items-center justify-between gap-2">
-          <span className="text-[15px] font-semibold">{t("crew")}</span>
-          {run.accepted_at && <span className="text-[13px] font-medium text-muted">{t("acceptedBy", { name: spinnerName, time: formatClock(run.accepted_at, locale) })}</span>}
-        </div>
-        <div className="flex flex-wrap pl-2.5">
-          {crew.map((p) => (
-            <Avatar key={p.id} profile={p} className="-ml-2.5 border-[3px] border-card" />
-          ))}
-        </div>
-      </section>
+      {!group.solo && (
+        <section className="flex flex-col gap-3.5 rounded-3xl bg-card p-5">
+          <div className="flex items-center justify-between gap-2">
+            <span className="text-[15px] font-semibold">{t("crew")}</span>
+            {run.accepted_at && <span className="text-[13px] font-medium text-muted">{t("acceptedBy", { name: spinnerName, time: formatClock(run.accepted_at, locale) })}</span>}
+          </div>
+          <div className="flex flex-wrap pl-2.5">
+            {crew.map((p) => (
+              <Avatar key={p.id} profile={p} className="-ml-2.5 border-[3px] border-card" />
+            ))}
+          </div>
+        </section>
+      )}
 
       <div className="flex items-start gap-3.5 rounded-3xl border-[1.5px] border-dashed border-line px-5 py-[18px]">
         <Icon name="camera" size={24} className="shrink-0 text-[#FFB36B]" />

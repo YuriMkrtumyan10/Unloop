@@ -9,7 +9,8 @@ import type { Profile } from "@/lib/types";
 import { Avatar } from "./Avatar";
 import { Icon } from "./Icon";
 
-export function ProofForm({ runId, groupId, points, crew }: { runId: string; groupId: string; points: number; crew: Profile[] }) {
+/** solo: a "Just me" run, so there's nobody else to tick. */
+export function ProofForm({ runId, groupId, points, crew, solo }: { runId: string; groupId: string; points: number; crew: Profile[]; solo: boolean }) {
   const t = useTranslations("proof");
   const te = useTranslations("errors");
   const input = useRef<HTMLInputElement>(null);
@@ -90,34 +91,36 @@ export function ProofForm({ runId, groupId, points, crew }: { runId: string; gro
         />
       </div>
 
-      <fieldset className="flex flex-col gap-3">
-        <legend className="mb-3 text-[15px] font-semibold">{t("whoShowedUp")}</legend>
-        <div className="grid grid-cols-5 gap-x-2 gap-y-3">
-          {crew.map((p) => {
-            const on = present.includes(p.id);
-            return (
-              <button key={p.id} type="button" aria-pressed={on} onClick={() => toggle(p.id)} className={`flex min-w-0 flex-col items-center gap-1.5 text-[13px] font-semibold ${on ? "" : "text-muted"}`}>
-                {on ? (
-                  <Avatar profile={p} size={52} />
-                ) : (
-                  <span className="flex size-[52px] items-center justify-center rounded-full border-[1.5px] border-dashed border-dim bg-raised text-lg font-bold text-muted">
-                    {p.display_name.charAt(0).toUpperCase()}
-                  </span>
-                )}
-                <span className="max-w-full truncate">{p.display_name}</span>
-              </button>
-            );
-          })}
-        </div>
-      </fieldset>
+      {!solo && (
+        <fieldset className="flex flex-col gap-3">
+          <legend className="mb-3 text-[15px] font-semibold">{t("whoShowedUp")}</legend>
+          <div className="grid grid-cols-5 gap-x-2 gap-y-3">
+            {crew.map((p) => {
+              const on = present.includes(p.id);
+              return (
+                <button key={p.id} type="button" aria-pressed={on} onClick={() => toggle(p.id)} className={`flex min-w-0 flex-col items-center gap-1.5 text-[13px] font-semibold ${on ? "" : "text-muted"}`}>
+                  {on ? (
+                    <Avatar profile={p} size={52} />
+                  ) : (
+                    <span className="flex size-[52px] items-center justify-center rounded-full border-[1.5px] border-dashed border-dim bg-raised text-lg font-bold text-muted">
+                      {p.display_name.charAt(0).toUpperCase()}
+                    </span>
+                  )}
+                  <span className="max-w-full truncate">{p.display_name}</span>
+                </button>
+              );
+            })}
+          </div>
+        </fieldset>
+      )}
 
       <div className="grow" />
 
       <div className="flex flex-col gap-2.5">
         <button type="button" onClick={submit} disabled={pending || present.length === 0} className="min-h-[60px] rounded-[18px] bg-lime px-4 font-display text-lg font-extrabold text-ink disabled:opacity-60">
-          {pending ? t("saving") : t("logIt", { n: each })}
+          {pending ? t("saving") : t(solo ? "logItSolo" : "logIt", { n: each })}
         </button>
-        {!photo && <p className="text-center text-[13px] font-medium text-muted">{t("withPhoto", { n: points + 5 })}</p>}
+        {!photo && <p className="text-center text-[13px] font-medium text-muted">{t(solo ? "withPhotoSolo" : "withPhoto", { n: points + 5 })}</p>}
         {error && <p role="alert" className="text-center text-sm text-spicy">{te(error as "generic")}</p>}
       </div>
     </>
