@@ -87,3 +87,8 @@ Format: date · decision · why · status
 **Needs:** Supabase's built-in email only reaches members of the Supabase team, so friends get sign-up and reset emails only once a custom email sender (SMTP) is set up in Supabase.
 **Status:** ✅ Decided (Yuri, 2026-10-19)
 
+
+### 2026-10-22 · Your unanswered spin stays locked, and the Spin screen says so
+**Decision:** Going back from a spin doesn't allow a fresh spin with new filters: your spin stays yours until you say "Let's do it" (or use the one re-roll). The Spin screen now shows that waiting spin at the top and dims the Spin button with a short reason, instead of silently reopening it.
+**Why:** Picking Extreme after an unanswered Easy spin brought the Easy one back, which looked like broken filters. Yuri chose to keep the lock and make it visible.
+**Status:** ✅ Decided (Yuri, 2026-10-22)
