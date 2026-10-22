@@ -15,7 +15,8 @@ function Label({ children }: { children: React.ReactNode }) {
   return <p className="text-xs font-semibold tracking-[0.08em] text-muted uppercase">{children}</p>;
 }
 
-export function SpinForm({ groupId, crewSize }: { groupId: string; crewSize: number }) {
+/** `lock` says why a spin can't pick anything new right now; the button stays off until the open challenge is answered or done. */
+export function SpinForm({ groupId, crewSize, lock }: { groupId: string; crewSize: number; lock: "revealed" | "accepted" | null }) {
   const t = useTranslations("home");
   const te = useTranslations("errors");
   const [filters, setFilters] = useState<SpinFilters>({ people: Math.max(crewSize, 1), time: null, costs: [], place: null, level: null });
@@ -121,12 +122,13 @@ export function SpinForm({ groupId, crewSize }: { groupId: string; crewSize: num
         <button
           type="button"
           onClick={go}
-          disabled={pending}
-          className="flex size-[168px] flex-col items-center justify-center gap-1 rounded-full bg-lime text-ink shadow-[0_0_0_10px_#1E1C19,0_0_0_12px_#2A2723] transition-transform active:scale-95"
+          disabled={pending || lock !== null}
+          className={`flex size-[168px] flex-col items-center justify-center gap-1 rounded-full bg-lime text-ink shadow-[0_0_0_10px_#1E1C19,0_0_0_12px_#2A2723] transition-transform ${lock ? "opacity-35" : "active:scale-95"}`}
         >
           <Icon name="spin" size={34} strokeWidth={2.4} className={pending ? "animate-spin-wheel" : ""} />
           <span className="font-display text-3xl font-extrabold">{t("spin")}</span>
         </button>
+        {lock && <p className="max-w-[280px] text-center text-sm text-soft">{t(`locked.${lock}`)}</p>}
         {error && (
           <p role="alert" className="max-w-[280px] text-center text-sm text-spicy">
             {te(error as "generic")}
