@@ -88,6 +88,11 @@ Format: date · decision · why · status
 **Status:** ✅ Decided (Yuri, 2026-10-19)
 
 
+### 2026-10-22 · Your unanswered spin stays locked, and the Spin screen says so
+**Decision:** Going back from a spin doesn't allow a fresh spin with new filters: your spin stays yours until you say "Let's do it" (or use the one re-roll). The Spin screen now shows that waiting spin at the top and dims the Spin button with a short reason, instead of silently reopening it.
+**Why:** Picking Extreme after an unanswered Easy spin brought the Easy one back, which looked like broken filters. Yuri chose to keep the lock and make it visible.
+**Status:** ✅ Decided (Yuri, 2026-10-22)
+
 ### 2026-10-22 · Solo play: a crew is optional
 **Decision:** After sign-up you give your name, then pick "Just me for now", start a crew, find one by name, or paste an invite link. "Just me" is your own private space with its own spin, scrapbook and points. It never shows in search and can't be joined or left. You can start or join a crew any time from the Crews tab.
 **Why:** Yuri wants people to be able to use the app alone without being forced to create a group. Matches the brief's secondary audience (solo mode).

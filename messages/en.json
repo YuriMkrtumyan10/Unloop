@@ -110,6 +110,7 @@
     "greeting": "Friday again?",
     "pts": "{n} pts",
     "happeningNow": "Happening now",
+    "yourSpin": "Your spin is waiting",
     "howMany": "How many of you?",
     "fewer": "Fewer people",
     "more": "More people",
@@ -132,7 +133,11 @@
       "spicy": "Spicy",
       "extreme": "Extreme"
     },
-    "spin": "SPIN"
+    "spin": "SPIN",
+    "locked": {
+      "revealed": "You already spun. Answer the one up top, then spin again.",
+      "accepted": "One challenge at a time. Log the one up top, then spin again."
+    }
   },
   "reveal": {
     "whoDecides": "{name} spun. {name} decides.",

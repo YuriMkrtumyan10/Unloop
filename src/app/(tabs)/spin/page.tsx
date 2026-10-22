@@ -14,9 +14,13 @@ export default async function SpinPage() {
 
   const [{ data: mine }, { data: open }] = await Promise.all([
     supabase.from("leaderboard").select("points").eq("group_id", group.id).eq("user_id", me.id).maybeSingle(),
-    supabase.from("runs").select("status, challenges(title)").eq("group_id", group.id).eq("status", "accepted").maybeSingle(),
+    supabase.from("runs").select("status, spun_by, challenges(title)").eq("group_id", group.id).in("status", ["revealed", "accepted"]).maybeSingle(),
   ]);
-  const activeTitle = open ? (open.challenges as unknown as Pick<Challenge, "title">).title[locale] : null;
+  // The spin can't pick anything new while the group is on a challenge or while your own reveal is unanswered:
+  // it sends you back to that one. Someone else's hanging reveal doesn't count, since a spin takes it over.
+  const waiting = open && (open.status === "accepted" || open.spun_by === me.id) ? open : null;
+  const lock = (waiting?.status ?? null) as "revealed" | "accepted" | null;
+  const activeTitle = waiting ? (waiting.challenges as unknown as Pick<Challenge, "title">).title[locale] : null;
 
   return (
     <div className="flex grow flex-col">
@@ -35,13 +39,13 @@ export default async function SpinPage() {
         <Link href="/run" className="mx-6 mt-5 flex items-center gap-3 rounded-[18px] border-[1.5px] border-lime px-4 py-3">
           <span className="size-2.5 shrink-0 rounded-full bg-lime shadow-[0_0_0_6px_rgba(200,240,60,0.18)]" />
           <span className="min-w-0 grow">
-            <span className="block text-xs font-bold tracking-[0.08em] text-lime uppercase">{t("happeningNow")}</span>
+            <span className="block text-xs font-bold tracking-[0.08em] text-lime uppercase">{t(lock === "accepted" ? "happeningNow" : "yourSpin")}</span>
             <span className="block truncate text-[15px] font-semibold">{activeTitle}</span>
           </span>
         </Link>
       )}
 
-      <SpinForm groupId={group.id} crewSize={crew.length} />
+      <SpinForm groupId={group.id} crewSize={crew.length} lock={lock} />
     </div>
   );
 }
