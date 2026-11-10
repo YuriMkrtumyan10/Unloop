@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getLocale, getTimeZone, getTranslations } from "next-intl/server";
 import type { Locale } from "@/i18n/config";
 import { requireGroup } from "@/lib/group";
 import { formatDay, formatMonth } from "@/lib/format";
@@ -14,6 +14,7 @@ export default async function ScrapbookPage() {
   const { supabase, group } = await requireGroup();
   const t = await getTranslations("scrapbook");
   const locale = (await getLocale()) as Locale;
+  const timeZone = await getTimeZone();
 
   const { data } = await supabase
     .from("runs")
@@ -34,7 +35,7 @@ export default async function ScrapbookPage() {
   // Group the polaroids by month, newest first.
   const months: { label: string; runs: DoneRun[] }[] = [];
   for (const run of runs) {
-    const label = formatMonth(run.completed_at!, locale);
+    const label = formatMonth(run.completed_at!, locale, timeZone);
     if (months.at(-1)?.label !== label) months.push({ label, runs: [] });
     months.at(-1)!.runs.push(run);
   }
@@ -69,7 +70,7 @@ export default async function ScrapbookPage() {
                     title={run.challenges.title[locale]}
                     note={run.note}
                     photoUrl={run.photo_path ? (urls.get(run.photo_path) ?? null) : null}
-                    day={formatDay(run.completed_at!, locale)}
+                    day={formatDay(run.completed_at!, locale, timeZone)}
                     points={Math.max(0, ...run.run_participants.map((p) => p.points))}
                     color={categoryColor[run.challenges.category]}
                   />

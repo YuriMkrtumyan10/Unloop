@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getLocale, getTimeZone, getTranslations } from "next-intl/server";
 import type { Locale } from "@/i18n/config";
 import { requireOpenRun } from "@/lib/run";
 import { formatClock, timeLabel, costLabel } from "@/lib/format";
@@ -63,7 +63,7 @@ export default async function RunPage() {
         <section className="flex flex-col gap-3.5 rounded-3xl bg-card p-5">
           <div className="flex items-center justify-between gap-2">
             <span className="text-[15px] font-semibold">{t("crew")}</span>
-            {run.accepted_at && <span className="text-[13px] font-medium text-muted">{t("acceptedBy", { name: spinnerName, time: formatClock(run.accepted_at, locale) })}</span>}
+            {run.accepted_at && <span className="text-[13px] font-medium text-muted">{t("acceptedBy", { name: spinnerName, time: formatClock(run.accepted_at, locale, await getTimeZone()) })}</span>}
           </div>
           <div className="flex flex-wrap pl-2.5">
             {crew.map((p) => (
