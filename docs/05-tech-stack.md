@@ -10,6 +10,7 @@ _Status: ✅ decided 2026-10-19._
 | Translations (EN / HY / RU) | **next-intl** | Standard way to run a Next.js app in several languages | Free |
 | Login, database, photo storage | **Supabase** | One service covers accounts, data, and image uploads | Free tier |
 | Hosting | **Vercel** | Push code, and it's live at a link in about a minute | Free tier |
+| Sign-up and reset emails | **Gmail** (as Supabase's email sender) | Free, no domain needed; Supabase's own email only reaches the team | Free |
 | Code storage and history | **GitHub** | Backup, history, and how Claude Code and Vercel connect | Free |
 | Building | **Claude Code** | Writes and runs the code directly in the project | Included with your Claude plan* |
 | App visuals and promo | **Higgsfield** (already connected) | Icons, promo images, launch video | Your Higgsfield plan |
