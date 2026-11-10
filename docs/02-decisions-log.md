@@ -120,6 +120,6 @@ Format: date · decision · why · status
 **Status:** ✅ Decided (Yuri, 2026-10-22)
 
 ### 2026-11-10 · Sign-up and reset emails go out through Gmail
-**Decision:** Supabase sends Unloop's emails (confirm sign-up, password reset) through Gmail as a custom email sender (SMTP), from Yuri's own Gmail for now, under the name "Unloop". Both emails got new wording in English, Armenian and Russian, in the app's colours (copies in `supabase/templates/`). The reset link now also works when it opens in a different browser from the one that asked for it.
+**Decision:** Supabase sends Unloop's emails (confirm sign-up, password reset) through Gmail as a custom email sender (SMTP), from Yuri's own Gmail for now, under the name "Unloop". Both emails got new wording in the app's colours, in English only: Yuri found three languages in one email too busy (copies in `supabase/templates/`). The reset link now also works when it opens in a different browser from the one that asked for it.
 **Why:** Supabase's built-in email only reaches members of the Supabase team, so friends couldn't confirm sign-up or reset a password. Gmail is free (about 500 emails a day) and needs no domain; Resend, Brevo and similar services need a domain we'd have to buy. A separate Unloop Gmail can replace the personal one any time by changing the address and app password in Supabase.
 **Status:** ✅ Done (Yuri, 2026-11-10)

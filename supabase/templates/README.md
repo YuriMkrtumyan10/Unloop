@@ -3,6 +3,7 @@
 Copies of the email templates set in the Supabase dashboard
 (Authentication → Emails → Templates). Supabase doesn't read these files; they're
 kept here so the wording and links have a history. Change them in both places.
+They're English only on purpose (Yuri, 2026-11-10: three languages in one email was too busy).
 
 | Template | Subject | File |
 |---|---|---|
