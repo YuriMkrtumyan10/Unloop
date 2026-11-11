@@ -24,12 +24,8 @@ Last time, Claude Code got a short brief and the plan grew while the code was be
 
 ## The four phases
 
-### Phase 0 · Set up the planning project (about 15 minutes, you)
-1. Create a new project in Claude, for example **"Unloop v2"**.
-2. Paste the text of `01-project-instructions.md` (everything under the line) into its Instructions field.
-3. Upload these as project files: `03-v1-lessons.md`, `04-handoff-pack-spec.md`, and everything in `v1-reference/`.
-4. Connect GitHub to the project (so it can read the v1 code as reference). Supabase, Vercel and Higgsfield can wait until Phase 2.
-5. Send `02-kickoff-message.md` as your first message.
+### Phase 0 · Set up the planning project ✅ done by Claude, 2026-11-11
+The "Unloop v2" project exists, with these instructions in its settings, the v1 `Unloop` repo attached for reference, and the Default cloud environment. Its first message (the kickoff) is sent. It copies this kit from the `restart-kit/` folder on the `claude/project-thread-q865fn` branch of the v1 repo into its own files.
 
 ### Phase 1 · Build the plan with Claude (several sessions, together)
 The plan has 10 stages (listed in `04-handoff-pack-spec.md`). Each stage ends with one finished file that you approve. Don't skip ahead: a stage is done when you've said "approved", and the file is saved.
@@ -40,7 +36,7 @@ Rough time: one or two evenings per stage for the product stages, less for the t
 1. Create a **new GitHub repo** (suggestion: `unloop-v2`, private). The old `Unloop` repo stays as the v1 reference.
 2. Put the finished plan files in the repo's `docs/` folder and the finished `CLAUDE.md` at the top level. The planning project can do this for you if GitHub is connected.
 3. Do the account steps from `plan/10-setup-checklist.md` (it will tell you exactly which ones need you: a new Supabase project, a new Vercel project, the email sender, the domain if any).
-4. **Important, this bit us in v1:** in the Claude Code cloud environment settings, add `*.supabase.co` and `*.vercel.app` to **Allowed domains** (Network access). Without this, Claude Code can't reach your database or test the live site, and it ends up working blind.
+4. **Important, this bit us in v1:** Claude Code must be able to reach the new Supabase and Vercel addresses. Once those projects exist, Claude Code asks to add their exact addresses to the network allowlist and you approve the card (or add `*.supabase.co` and `*.vercel.app` under Allowed domains in the cloud environment settings yourself). Without this, Claude Code can't reach your database or test the live site, and it ends up working blind.
 5. Start a Claude Code session on the new repo and paste the kickoff prompt from `05-claude-code-kickoff.md`.
 
 ### Phase 3 · Build, milestone by milestone
