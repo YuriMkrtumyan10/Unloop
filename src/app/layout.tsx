@@ -3,6 +3,7 @@ import { Caveat, Figtree, Manrope, Noto_Sans_Armenian, Unbounded } from "next/fo
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale } from "next-intl/server";
 import { ServiceWorker } from "@/components/ServiceWorker";
+import { TimeZoneCookie } from "@/components/TimeZoneCookie";
 import "./globals.css";
 
 const unbounded = Unbounded({ subsets: ["latin", "cyrillic"], weight: ["500", "700", "800"], variable: "--font-unbounded" });
@@ -34,6 +35,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         <NextIntlClientProvider>
           <div className="mx-auto flex min-h-dvh w-full max-w-md flex-col">{children}</div>
         </NextIntlClientProvider>
+        <TimeZoneCookie />
         <ServiceWorker />
       </body>
     </html>

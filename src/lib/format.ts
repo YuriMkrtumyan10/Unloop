@@ -15,14 +15,15 @@ export function costLabel(cost: number) {
 
 const intlLocale: Record<Locale, string> = { en: "en-GB", hy: "hy-AM", ru: "ru-RU" };
 
-export function formatDay(iso: string, locale: Locale) {
-  return new Intl.DateTimeFormat(intlLocale[locale], { day: "numeric", month: "short" }).format(new Date(iso));
+// timeZone: the viewer's (from next-intl's getTimeZone()), since these run on a UTC server.
+export function formatDay(iso: string, locale: Locale, timeZone: string) {
+  return new Intl.DateTimeFormat(intlLocale[locale], { day: "numeric", month: "short", timeZone }).format(new Date(iso));
 }
 
-export function formatMonth(iso: string, locale: Locale) {
-  return new Intl.DateTimeFormat(intlLocale[locale], { month: "long", year: "numeric" }).format(new Date(iso));
+export function formatMonth(iso: string, locale: Locale, timeZone: string) {
+  return new Intl.DateTimeFormat(intlLocale[locale], { month: "long", year: "numeric", timeZone }).format(new Date(iso));
 }
 
-export function formatClock(iso: string, locale: Locale) {
-  return new Intl.DateTimeFormat(intlLocale[locale], { hour: "2-digit", minute: "2-digit" }).format(new Date(iso));
+export function formatClock(iso: string, locale: Locale, timeZone: string) {
+  return new Intl.DateTimeFormat(intlLocale[locale], { hour: "2-digit", minute: "2-digit", timeZone }).format(new Date(iso));
 }
